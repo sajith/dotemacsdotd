@@ -1,0 +1,15 @@
+/%backup%~
+/.emacs.desktop
+/.emacs.desktop.lock
+/RFC/
+/ac-comphist.dat
+/auto-save-list
+/backups/
+/elpa/
+/games/
+/history
+/ido.last
+/recentf
+/session.*
+/tramp
+/url

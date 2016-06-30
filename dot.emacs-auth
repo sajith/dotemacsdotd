@@ -1,0 +1,26 @@
+;; -*- emacs-lisp -*-
+
+(setq my-freenode-username     ""
+      my-freenode-pass         "")
+
+(setq my-oftc-username         ""
+      my-oftc-pass             "")
+
+(setq my-librefm-username      ""
+      my-librefm-password      "")
+
+(setq my-pianobar-username     ""
+      my-pianobar-password     "")
+
+(setq my-gtalk-jabber-jid      ""
+      my-gtalk-jabber-password ""
+      my-gtalk-jabber-server   "")
+
+(setq my-hcoop-jabber-jid      ""
+      my-hcoop-jabber-password ""
+      my-hcoop-jabber-server   "")
+
+(setq my-smtp-username         ""
+      my-smtp-password         ""
+      my-smtp-server           ""
+      my-smtp-server-port      0)
