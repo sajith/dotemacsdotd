@@ -1,2 +1,3 @@
-# dotemacsdotd
+* dotemacsdotd
+
 Ye olde ~/.emacs.d
