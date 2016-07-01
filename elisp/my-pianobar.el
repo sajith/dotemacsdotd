@@ -3,7 +3,6 @@
 ;; ---------------------------------------------------------------------
 
 (use-package pianobar
-  :ensure t
   :config
   (setq
    pianobar-username my-pianobar-username

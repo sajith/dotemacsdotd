@@ -2,15 +2,12 @@
 ;; (setenv "PORT" "8000")
 ;; (setenv "APPROOT" "http://localhost:8000")
 
-(use-package ghc
- :ensure t)
+(use-package ghc)
 
 ;; structured-haskell-mode
-(use-package shm
-  :ensure t)
+(use-package shm)
 
 (use-package company-ghc
-  :ensure t
   :init
   (add-to-list 'company-backends 'company-ghc)
   (custom-set-variables '(company-ghc-show-info t))
@@ -18,8 +15,6 @@
   (add-hook 'haskell-mode-hook 'company-mode))
 
 (use-package haskell-mode
-  :ensure t
-
   :init
   (setq
     haskell-notify-p t

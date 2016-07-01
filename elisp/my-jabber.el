@@ -2,7 +2,7 @@
 
 ;; ---------------------------------------------------------------------
 
-(use-package jabber-alert
+(use-package jabber
   :defer t
   :init
   (setq jabber-debug-log-xml t

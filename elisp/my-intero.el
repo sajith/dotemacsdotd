@@ -16,7 +16,6 @@
 ;; ---------------------------------------------------------------------
 
 (use-package intero
-  :ensure t
   :bind
   (("C-`"     . haskell-interactive-bring)
    ("C-c C-r" . haskell-process-reload-devel-main))

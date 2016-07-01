@@ -110,6 +110,9 @@
 
 ;; ---------------------------------------------------------------------
 
+(setq-default use-package-always-defer t
+              use-package-always-ensure t)
+
 (when (>= emacs-major-version 24)
   (require 'package)
   (setq-default
@@ -182,6 +185,7 @@
 ;; ---------------------------------------------------------------------
 
 (use-package window
+  :ensure nil
   :bind (("<f5>" . shrink-window-horizontally)
          ("<f6>" . enlarge-window-horizontally)
          ("<f7>" . shrink-window)
@@ -190,7 +194,6 @@
 ;; ---------------------------------------------------------------------
 
 (use-package window-number
-  :ensure t
   :config
   (window-number-mode)
   (window-number-meta-mode))
@@ -206,14 +209,11 @@
 ;; ---------------------------------------------------------------------
 
 (use-package magit
-  :ensure t
   :bind ("<f11>" . magit-status))
 
 ;; ---------------------------------------------------------------------
 
 (use-package dired-sort-menu
-  :ensure t
-  ;; :disabled t
   :config
   (add-hook 'dired-load-hook 'dired-sort-menu))
 
@@ -239,11 +239,9 @@
 ;; other fun themes: almost-monokai and zenburn.
 
 (use-package color-theme
-  :ensure t
   :config (color-theme-initialize))
 
 (use-package color-theme-solarized
-  :ensure t
   :config (color-theme-solarized))
 
 ;; ---------------------------------------------------------------------
@@ -292,13 +290,13 @@
               (turn-on-reftex))))
 
 (use-package latex-preview-pane
-  :ensure t
   :init
   (latex-preview-pane-enable))
 
 ;; ---------------------------------------------------------------------
 
 (use-package c-mode
+  :ensure nil
   :bind
   (:map c-mode-map
         ("<tab>" . indent-or-complete)
@@ -318,6 +316,7 @@
   (c-set-style          "linux"))
 
 (use-package c++-mode
+  :ensure nil
   :bind (:map c++-mode-map
               ("C-m" . c-context-line-break)))
 
@@ -358,8 +357,6 @@
 ;; ---------------------------------------------------------------------
 
 (use-package company
-  :ensure t
-  :defer t
   :config (global-company-mode))
 
 ;; ---------------------------------------------------------------------
@@ -381,7 +378,6 @@
 ;; ---------------------------------------------------------------------
 
 (use-package dictionary
-  :ensure t
   ;; :init (setq dictionary-server "localhost")
   :config
   (if (member system-name '("nonzen.home" "idli.home"))
@@ -443,8 +439,7 @@
 ;; ---------------------------------------------------------------------
 
 ;; support for Yesod templates.
-(use-package shakespeare-mode
-  :ensure t)
+(use-package shakespeare-mode)
 
 ;; ---------------------------------------------------------------------
 
@@ -500,6 +495,7 @@
 ;; ---------------------------------------------------------------------
 
 (use-package org-capture
+  :ensure nil
   :bind ("C-q" . org-capture)
   :init
   (setq org-capture-templates
@@ -524,6 +520,7 @@
 ;; org+jekyll website setup.
 
 (use-package ox-publish
+  :ensure nil
   :bind (("C-x p" . org-publish-current-project)
          ("C-x f" . org-publish-current-file))
   :init
@@ -587,7 +584,6 @@
 
 ;; http://jblevins.org/projects/deft/
 (use-package deft
-  :ensure t
   :init
   (setq
    deft-extensions '("org" "txt" "tex")
