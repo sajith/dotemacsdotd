@@ -194,9 +194,11 @@
 ;; ---------------------------------------------------------------------
 
 (use-package window-number
+  :init
+  (require 'window-number)
   :config
-  (window-number-mode)
-  (window-number-meta-mode))
+  (window-number-mode 1)
+  (window-number-meta-mode 1))
 
 ;; ---------------------------------------------------------------------
 
