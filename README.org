@@ -1,3 +1,8 @@
 * dotemacsdotd
 
-Ye olde ~/.emacs.d
+Ye olde =~/.emacs.d=!
+
+#+BEGIN_VERSE
+There are many like this
+But this one is mine.
+#+END_VERSE
