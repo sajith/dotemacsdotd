@@ -241,10 +241,10 @@
 ;; other fun themes: almost-monokai and zenburn.
 
 (use-package color-theme
-  :config (color-theme-initialize))
+  :init (color-theme-initialize))
 
 (use-package color-theme-solarized
-  :config (color-theme-solarized))
+  :init (color-theme-solarized))
 
 ;; ---------------------------------------------------------------------
 
