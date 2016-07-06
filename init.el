@@ -246,6 +246,9 @@
 (use-package color-theme-solarized
   :init (color-theme-solarized))
 
+(use-package color-theme-approximate
+  :init (color-theme-approximate-on))
+
 ;; ---------------------------------------------------------------------
 
 ;; This is for situations where color-theme may not be available.
