@@ -151,6 +151,17 @@
 
 ;; ---------------------------------------------------------------------
 
+;; ;; Some more shaved Yak hair, for eventual use
+
+;; (defun my-load (filename)
+;;   (let* ((my-path (expand-file-name "elisp" user-emacs-directory))
+;;          (my-file (expand-file-name filename my-path)))
+;;     (when (file-readable-p my-file)
+;;       (message "Loading %s" my-file)
+;;       (load my-file))))
+
+;; ---------------------------------------------------------------------
+
 ;; (use-package mpg123)
 ;; (use-package htmlize)
 ;; (use-package which-func)
