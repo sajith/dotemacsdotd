@@ -491,6 +491,12 @@
 
 ;; ---------------------------------------------------------------------
 
+(use-package org-clock
+  :ensure nil
+  :init (setq org-clock-idle-time 10))
+
+;; ---------------------------------------------------------------------
+
 ;; (use-package org-pomodoro
 ;;   :config
 ;;   ;; (add-hook 'org-clock-in-hook 'org-pomodoro-start)
