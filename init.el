@@ -29,7 +29,7 @@
 (line-number-mode                t)
 (transient-mark-mode             t)
 (show-paren-mode                 t)
-(desktop-save-mode               t)
+(desktop-save-mode               nil)
 (savehist-mode                   t)
 (prefer-coding-system            'utf-8)
 (display-battery-mode            t)
