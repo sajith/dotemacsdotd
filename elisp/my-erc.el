@@ -33,7 +33,8 @@
 
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#emacs" "#haskell" "#hcoop")
-          ("oftc.net"     "#debian")))
+          ("oftc.net"     "#debian")
+          ("storjcommunity.irc.slack.com" "#dev" "#chat" "#announcements")))
 
   :config
   (add-hook 'erc-after-connect
