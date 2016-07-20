@@ -64,6 +64,11 @@
            :nick my-oftc-username
            :full-name user-full-name))
 
+(defun erc-storj ()
+  "Connect to storj Slack IRC gateway"
+  (interactive)
+  (erc-tls :server "storjcommunity.irc.slack.com"))
+
 ;; ---------------------------------------------------------------------
 
 ;; TODO: rewrite using (require)
