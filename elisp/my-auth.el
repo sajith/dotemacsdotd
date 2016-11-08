@@ -6,13 +6,33 @@
 
 (require 'auth-source)
 
-(setq auth-sources '("~/.authinfo.gpg"))
+;; ---------------------------------------------------------------------
+
+;; https://github.com/DamienCassou/auth-password-store
+;; an auth-source backend for password-store.
+(use-package auth-password-store
+  :ensure t
+  :init
+  (password-store-init "0x0C6DA6A29D5F02BA")
+  (auth-pass-enable))
+
+;; ---------------------------------------------------------------------
+
+;; (setq auth-sources '("~/.authinfo.gpg"))
+
+;; (defun my-username (host)
+;;   (nth 0 (auth-source-user-and-password host)))
+  
+;; (defun my-password (host)
+;;   (nth 1 (auth-source-user-and-password host)))
+
+;; ---------------------------------------------------------------------
 
 (defun my-username (host)
-  (nth 0 (auth-source-user-and-password host)))
-  
+  (auth-pass-get "Username" host))
+
 (defun my-password (host)
-  (nth 1 (auth-source-user-and-password host)))
+  (password-store-get host))
 
 ;; ---------------------------------------------------------------------
 
@@ -28,12 +48,12 @@
 (setq my-pianobar-username (my-username "pandora.com")
       my-pianobar-password (my-password "pandora.com"))
 
-(setq my-gtalk-jabber-password (my-password "talk.google.com"))
+;; (setq my-gtalk-jabber-password (my-password "talk.google.com"))
 
-(setq my-smtp-server      "smtp.gmail.com"
-      my-smtp-server-port 578
-      my-smtp-username    (my-username "smtp.gmail.com")
-      my-smtp-password    (my-password "smtp.gmail.com"))
+;; (setq my-smtp-server      "smtp.gmail.com"
+;;       my-smtp-server-port 578
+;;       my-smtp-username    (my-username "smtp.gmail.com")
+;;       my-smtp-password    (my-password "smtp.gmail.com"))
 
 ;; ---------------------------------------------------------------------
 
