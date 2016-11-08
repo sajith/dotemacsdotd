@@ -18,6 +18,12 @@
 
 ;; ---------------------------------------------------------------------
 
+;; https://github.com/NicolasPetton/pass
+;; a major mode for editing password-store database.
+;; (use-package pass)
+
+;; ---------------------------------------------------------------------
+
 ;; (setq auth-sources '("~/.authinfo.gpg"))
 
 ;; (defun my-username (host)
