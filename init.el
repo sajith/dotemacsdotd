@@ -443,6 +443,16 @@
 
 ;; ---------------------------------------------------------------------
 
+;; Add this to an .org file for sunrise/sunset:
+;; * Calendar
+;; %%(diary-sunrise-sunset)
+
+(setq calendar-latitude 41.08)
+(setq calendar-longitude -85.1386)
+(setq calendar-location-name "Fort Wayne, IN")
+
+;; ---------------------------------------------------------------------
+
 ;; Haskell
 
 ;; Need to have these programs: ghc-mod happy hasktags hindent hlint
@@ -476,6 +486,7 @@
         org-archive-location   "~/org/archive.org::From %s")
 
   (setq org-agenda-files (list "~/org/agenda.org"
+                               "~/org/sunrise.org"
                                "~/org/books.org"
                                "~/org/betty.org"
                                "~/org/chores.org"
