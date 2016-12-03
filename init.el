@@ -405,15 +405,15 @@
 
 ;; ---------------------------------------------------------------------
 
-(use-package twittering-mode
-  :config
-  (setq
-   twittering-use-master-password t
-   twittering-tinyurl-service 'goo.gl)
-  (add-hook 'twittering-edit-mode-hook
-            (lambda()
-              (flyspell-mode 1)
-              (auto-fill-mode -1))))
+;; (use-package twittering-mode
+;;   :config
+;;   (setq
+;;    twittering-use-master-password t
+;;    twittering-tinyurl-service 'goo.gl)
+;;   (add-hook 'twittering-edit-mode-hook
+;;             (lambda()
+;;               (flyspell-mode 1)
+;;               (auto-fill-mode -1))))
 
 ;; ---------------------------------------------------------------------
 
