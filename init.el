@@ -464,6 +464,15 @@
 
 ;; ---------------------------------------------------------------------
 
+;; hindent is supposed to be modern and perhaps replace
+;; stylish-haskell one day.  I still like stylish-haskell...
+
+;; (use-package hindent
+;;   :init
+;;   (add-hook 'haskell-mode-hook #'hindent-mode))
+
+;; ---------------------------------------------------------------------
+
 ;; support for Yesod templates.
 (use-package shakespeare-mode)
 
