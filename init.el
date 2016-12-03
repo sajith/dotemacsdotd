@@ -120,7 +120,6 @@
    tls-checktrust 0
    load-prefer-newer t
    package-enable-at-startup nil)
-  (package-initialize)
 
   ;; use https sources.
   (setq package-archives
@@ -128,6 +127,8 @@
           ("gnu"   . "https://elpa.gnu.org/packages/")
           ;; ("marmalade" . "https://marmalade-repo.org/packages/")
           ))
+
+  (package-initialize)  
 
   ;; install use-package
   (unless (package-installed-p 'use-package)
