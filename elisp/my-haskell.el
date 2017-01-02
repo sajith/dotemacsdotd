@@ -9,7 +9,8 @@
 
 (use-package company-ghc
   :init
-  (add-to-list 'company-backends 'company-ghc)
+  (with-eval-after-load 'company
+    (add-to-list 'company-backends 'company-ghc))
   (custom-set-variables '(company-ghc-show-info t))
   :config
   (add-hook 'haskell-mode-hook 'company-mode))
