@@ -137,17 +137,11 @@
 
 ;; ---------------------------------------------------------------------
 
-;; icky macOS PATH stuff.
-(when (eq system-type 'darwin)
-    (let* ((path-list '("/usr/local/bin"
-                        "/Users/sajith/.local/bin"
-                        "/Users/sajith/.cabal/bin"
-                        "/Users/sajith/.nix-profile/bin"
-                        "/Users/sajith/.nix-profile/sbin"
-                        "/Applications/ghc-7.8.4.app/Contents/bin"))
-           (path-str (mapconcat 'identity path-list path-separator)))
-      (setq exec-path (append path-list exec-path))
-      (setenv "PATH" (concat path-str path-separator (getenv "PATH")))))
+(use-package exec-path-from-shell
+  :init
+  (when (or (eq system-type 'darwin)
+            (eq system-type 'gnu/linux))
+    (exec-path-from-shell-initialize)))
 
 ;; ---------------------------------------------------------------------
 
