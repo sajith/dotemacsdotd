@@ -2,10 +2,8 @@
 ;; (setenv "PORT" "8000")
 ;; (setenv "APPROOT" "http://localhost:8000")
 
-(use-package ghc)
-
-;; structured-haskell-mode
-(use-package shm)
+;; (use-package ghc)
+;; (use-package shm)
 
 (use-package company-ghc
   :init
