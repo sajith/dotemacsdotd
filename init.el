@@ -124,7 +124,7 @@
 
   ;; use https sources.
   (setq package-archives
-        '(("melpa" . "https://melpa.milkbox.net/packages/")
+        '(("melpa" . "https://melpa.org/packages/")
           ("gnu"   . "https://elpa.gnu.org/packages/")
           ;; ("marmalade" . "https://marmalade-repo.org/packages/")
           ))
