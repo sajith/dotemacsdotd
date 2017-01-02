@@ -50,14 +50,14 @@
   :config
   (add-hook 'haskell-mode-hook
             (lambda ()
-              (ghc-init)
+              ;; (ghc-init)
               (flycheck-mode 1) ;; annoying
               (flymake-mode 0) ;; annoying
               (interactive-haskell-mode 1)  ;; not compatible with intero
               (haskell-auto-insert-module-template)
               (turn-on-haskell-doc-mode)
               ;; (turn-on-haskell-indentation)
-              (structured-haskell-mode)
+              ;; (structured-haskell-mode)
               ))
 
   :bind
