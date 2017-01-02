@@ -459,8 +459,8 @@
 ;; hoogle present structured-haskell-mode stylish-haskell
 
 ;; load one of intero or regular haskell mode.
-(load "~/.emacs.d/elisp/my-intero.el")
-;; (load "~/.emacs.d/elisp/my-hakell.el")
+;; (load "~/.emacs.d/elisp/my-intero.el")
+(load "~/.emacs.d/elisp/my-haskell.el")
 
 ;; ---------------------------------------------------------------------
 
