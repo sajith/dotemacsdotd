@@ -77,9 +77,3 @@
         ("C-."     . haskell-move-nested-right))
   ) ;; end haskell-mode
 
-(use-package w3m-haddock
-  :bind
-  ("C-c C-d"  . haskell-w3m-open-haddock)
-  :init
-  (setq haskell-w3m-haddock-dirs '("~/.cabal/x86_64/share/doc/")))
-
