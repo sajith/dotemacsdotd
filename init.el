@@ -77,15 +77,17 @@
 
 ;; ---------------------------------------------------------------------
 
-;; Open links with this week's favorite browser:
-(setq browse-url-browser-function 'w3m-browse-url)
-
-;; ;; Or just use the system default browser:
-;; (setq browse-url-browser-function 'browse-url-default-browser)
+;; ;; Open links with this week's favorite browser:
+;; (setq browse-url-browser-function 'w3m-browse-url)
 
 ;; ;; Or a "custom" browser:
 ;; (setq browse-url-browser-function 'browse-url-generic
 ;;       browse-url-generic-program "chromium")
+
+;; Use default browser in Mac OS; w3m otherwise.
+(if (eq system-type 'darwin)
+    (setq browse-url-browser-function 'browse-url-default-browser)
+  (setq browse-url-browser-function 'w3m-browse-url))
 
 ;; ---------------------------------------------------------------------
 
