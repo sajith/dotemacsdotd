@@ -318,7 +318,7 @@
   :ensure nil
   :bind
   (:map c-mode-map
-        ("<tab>" . indent-or-complete)
+        ;; ("<tab>" . indent-or-complete)
         ("<ret>" . newline-and-indent)
         ("C-m"   . c-context-line-break)
         ;; Quickly switching between header and source.
@@ -387,12 +387,12 @@
 
 ;; to hit tab to auto-complete (like bash does).
 ;; http://www.emacswiki.org/cgi-bin/wiki?EmacsNiftyTricks
-(defun indent-or-complete ()
-  "Complete if point is at end of a word, otherwise indent line."
-  (interactive)
-  (if (looking-at "\\>")
-      (yas/expand)
-    (indent-for-tab-command)))
+;; (defun indent-or-complete ()
+;;   "Complete if point is at end of a word, otherwise indent line."
+;;   (interactive)
+;;   (if (looking-at "\\>")
+;;       (yas/expand)
+;;     (indent-for-tab-command)))
 
 ;; ---------------------------------------------------------------------
 
