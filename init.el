@@ -269,7 +269,9 @@
 
 (if (display-graphic-p)
     (color-theme-solarized)
-  (load-theme 'ample-zen))
+  (progn
+    (load-theme 'ample-zen)
+    (set-face-background 'menu "Black")))
 
 ;; ;; another possibility:
 ;; (use-package moe-theme)
