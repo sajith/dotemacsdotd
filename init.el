@@ -260,24 +260,22 @@
 (use-package color-theme
   :init (color-theme-initialize))
 
-(use-package color-theme-solarized
-  :init (color-theme-solarized))
-
+;; Makes Emacs theme works on terminal transparently
 (use-package color-theme-approximate
   :init (color-theme-approximate-on))
 
-;; (use-package color-theme-solarized)
-;; (use-package ample-zen-theme)
+(use-package color-theme-solarized)
+(use-package ample-zen-theme)
 
-;; ;; ;; another possibility:
-;; ;; (use-package moe-theme)
-;; ;; (progn
-;; ;;    (require 'moe-theme)
-;; ;;    (moe-dark))
+(if (display-graphic-p)
+    (color-theme-solarized)
+  (load-theme 'ample-zen))
 
-;; ;; (if (display-graphic-p)
-;; ;;     (color-theme-solarized)
-;; ;;   (load-theme 'ample-zen))
+;; ;; another possibility:
+;; (use-package moe-theme)
+;; (progn
+;;    (require 'moe-theme)
+;;    (moe-dark))
 
 ;; ---------------------------------------------------------------------
 
