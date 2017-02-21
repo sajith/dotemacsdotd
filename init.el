@@ -266,6 +266,19 @@
 (use-package color-theme-approximate
   :init (color-theme-approximate-on))
 
+;; (use-package color-theme-solarized)
+;; (use-package ample-zen-theme)
+
+;; ;; ;; another possibility:
+;; ;; (use-package moe-theme)
+;; ;; (progn
+;; ;;    (require 'moe-theme)
+;; ;;    (moe-dark))
+
+;; ;; (if (display-graphic-p)
+;; ;;     (color-theme-solarized)
+;; ;;   (load-theme 'ample-zen))
+
 ;; ---------------------------------------------------------------------
 
 ;; This is for situations where color-theme may not be available.
