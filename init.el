@@ -48,6 +48,9 @@
  global-auto-revert-mode         t
  require-final-newline           t
  font-lock-maximum-decoration    t
+
+ uniquify-buffer-name-style      'forward
+ 
  vc-make-backup-files            nil
 
  ;; https://www.emacswiki.org/emacs/BackupDirectory
