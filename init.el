@@ -67,10 +67,6 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; (setq-default show-trailing-whitespace t)
-;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
-;; (add-hook 'before-save-hook 'whitespace-cleanup)
-
 ;; ---------------------------------------------------------------------
 
 ;; C-x n n for narrowing / C-x n w for widening
@@ -252,6 +248,13 @@
   :config
   (add-hook 'css-mode-hook 'rainbow-mode)
   (add-hook 'shakespeare-mode-hook 'rainbow-mode))
+
+;; ---------------------------------------------------------------------
+
+(setq-default show-trailing-whitespace t)
+
+;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; ---------------------------------------------------------------------
 
