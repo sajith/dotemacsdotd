@@ -399,9 +399,8 @@
 ;; ---------------------------------------------------------------------
 
 (use-package yasnippet
-  :config
-  (yas-global-mode 1)
-  (setq yas-snippet-dirs '("~/.emacs.d/snippets")))
+  :init
+  (yas-global-mode 1))
 
 ;; to hit tab to auto-complete (like bash does).
 ;; http://www.emacswiki.org/cgi-bin/wiki?EmacsNiftyTricks
