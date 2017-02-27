@@ -537,6 +537,7 @@
         org-archive-location   "~/org/archive.org::From %s")
 
   (setq org-agenda-files (list "~/org/agenda.org"
+                               "~/org/fermilab.org"
                                "~/org/sunrise.org"
                                "~/org/books.org"
                                "~/org/betty.org"
