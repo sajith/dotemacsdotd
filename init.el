@@ -489,9 +489,9 @@
 ;; * Calendar
 ;; %%(diary-sunrise-sunset)
 
-(setq calendar-latitude 41.08)
-(setq calendar-longitude -85.1386)
-(setq calendar-location-name "Fort Wayne, IN")
+(setq calendar-latitude      41.8089
+      calendar-longitude     -88.0112
+      calendar-location-name "Downers Grove, IL")
 
 ;; ---------------------------------------------------------------------
 
