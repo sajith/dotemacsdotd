@@ -50,7 +50,7 @@
  font-lock-maximum-decoration    t
 
  uniquify-buffer-name-style      'forward
- 
+
  vc-make-backup-files            nil
 
  ;; https://www.emacswiki.org/emacs/BackupDirectory
@@ -135,7 +135,7 @@
           ;; ("marmalade" . "https://marmalade-repo.org/packages/")
           ))
 
-  (package-initialize)  
+  (package-initialize)
 
   ;; install use-package
   (unless (package-installed-p 'use-package)
@@ -237,7 +237,7 @@
 ;; This removes unsightly ^M characters that would otherwise appear in
 ;; the output of java applications.
 (add-hook 'comint-output-filter-functions
-	  'comint-strip-ctrl-m)
+      'comint-strip-ctrl-m)
 
 (add-hook 'doc-view-mode-hook 'auto-revert-mode)
 
@@ -523,7 +523,7 @@
         org-columns-content t
         org-align-all-tags t
         org-agenda-include-diary t)
-  
+
   (setq org-default-notes-file "~/org/notes.org"
         org-archive-location   "~/org/archive.org::From %s")
 
@@ -549,7 +549,7 @@
                                       "DONE(d)"
                                       "DELEGATED"
                                       "CANCELLED(c)")))
-  
+
   :config
   (add-hook 'org-mode-hook (progn (flyspell-mode t)))) ;; end org
 
@@ -701,7 +701,7 @@
 
 ;; Write customizations to a separate file.
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(when (file-exists-p custom-file)      
+(when (file-exists-p custom-file)
   (load custom-file))
 
 ;; ---------------------------------------------------------------------
