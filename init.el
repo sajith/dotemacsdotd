@@ -256,6 +256,14 @@
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;; (add-hook 'before-save-hook 'whitespace-cleanup)
 
+;; Clean up whitespace, but only lines we've touched.
+;; https://github.com/lewang/ws-butler
+(use-package ws-butler
+  :config
+  (add-hook 'c-mode-hook 'ws-butler-mode)
+  (add-hook 'c++-mode-hook 'ws-butler-mode)
+  (add-hook 'python-mode-hook 'ws-butler-mode))
+
 ;; ---------------------------------------------------------------------
 
 ;; other fun themes: almost-monokai and zenburn.
