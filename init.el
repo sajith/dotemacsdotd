@@ -215,6 +215,15 @@
 
 ;; ---------------------------------------------------------------------
 
+;; bring up help for key bindings
+;; via http://cestlaz.github.io/posts/using-emacs-32-cpp/
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode))
+
+;; ---------------------------------------------------------------------
+
 (use-package recentf
   :bind ("C-c f" . recentf-open-files)
   :init
