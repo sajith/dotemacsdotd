@@ -3,9 +3,10 @@
 ;; things from http://tuhdo.github.io/c-ide.html
 
 (require 'cc-mode)
-(require 'company)
 
-(setq company-backends (delete 'company-semantic company-backends))
+(use-package company
+  :config
+  (setq company-backends (delete 'company-semantic company-backends)))
 
 (define-key c-mode-map  [(tab)] 'indent-or-complete)
 (define-key c++-mode-map  [(tab)] 'indent-or-complete)
