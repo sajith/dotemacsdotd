@@ -57,7 +57,7 @@
 
 ;; https://www.emacswiki.org/emacs/ErcSSL
 ;; Or, just use erc-ssl?
-(defun erc-select-ssl ()
+(defun erc-select-oftc ()
   "Connect to IRC over SSL."
   (interactive)
   (erc-tls :server "irc.oftc.net"
