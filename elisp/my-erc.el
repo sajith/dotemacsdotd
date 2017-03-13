@@ -65,6 +65,14 @@
            :nick my-oftc-username
            :full-name user-full-name))
 
+(defun erc-select-freenode ()
+  "Connect to freenode over SSL."
+  (interactive)
+  (erc-tls :server "irc.freenode.net"
+           :port 6697
+           :nick my-freenode-username
+           :full-name user-full-name))
+
 (defun erc-storj ()
   "Connect to storj Slack IRC gateway"
   (interactive)
