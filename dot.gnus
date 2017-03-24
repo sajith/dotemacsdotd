@@ -1,3 +1,5 @@
+;; -*- mode: emacs-lisp; -*-
+
 (setq user-full-name "Sajith Sasidharan"
       user-mail-address "sajith@hcoop.net"
       auth-sources '((:source "~/.authinfo.gpg"))
