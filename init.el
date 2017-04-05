@@ -224,6 +224,15 @@
 
 ;; ---------------------------------------------------------------------
 
+;; on the fly syntax checking
+;; Also via http://cestlaz.github.io/posts/using-emacs-32-cpp/
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t))
+
+;; ---------------------------------------------------------------------
+
 (use-package recentf
   :bind ("C-c f" . recentf-open-files)
   :init
