@@ -7,7 +7,7 @@
       mml2015-encrypt-to-self t)
 
 (setq gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]"
-      gnus-agent nil
+      ;; gnus-agent nil
       ;; gnus-select-method '(nnnil "")
       gnus-select-method '(nntp "news.gmane.org")
       ;; gnus-select-method '(nntp "news.gwene.org")
