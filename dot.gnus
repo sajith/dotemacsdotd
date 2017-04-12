@@ -44,3 +44,27 @@ This moves them into the Spam folder."
   (interactive)
   (gnus-summary-move-article nil "nnimap+imap.gmail.com:[Gmail]/Spam"))
 
+;; bbdb
+
+(use-package bbdb
+  ;; :if (display-graphic-p)
+  :config
+  (bbdb-initialize 'gnus 'mail 'message 'anniv)
+  (bbdb-mua-auto-update-init 'gnus 'mail 'message)
+
+  (setq bbdb-complete-mail-allow-cycling t
+        bbdb-complete-name-allow-cycling t
+        bbdb-allow-duplicates t
+        bbdb-message-all-addresses t
+
+        ;; or 'create to create without asking
+        bbdb-mua-auto-update-p 'query
+
+        ;; be disposable with SPC
+        bbdb-electric-p t
+
+        ;; very small
+        bbdb-popup-target-lines  5)
+
+  (add-hook 'message-setup-hook 'bbdb-mail-aliases))
+
