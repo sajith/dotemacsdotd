@@ -13,6 +13,8 @@
       ;; gnus-select-method '(nntp "news.gwene.org")
       gnus-secondary-select-methods '((nnimap "imap.gmail.com")))
 
+(setq mm-decrypt-option 'known)
+
 (setq message-send-mail-function 'smtpmail-send-it
       smtpmail-stream-type 'ssl
       smtpmail-smtp-server "smtp.gmail.com"
