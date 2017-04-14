@@ -44,6 +44,11 @@ This moves them into the Spam folder."
   (interactive)
   (gnus-summary-move-article nil "nnimap+imap.gmail.com:[Gmail]/Spam"))
 
+(defun gmail-trash ()
+  "Move the current or marked mails to Trash folder."
+  (interactive)
+  (gnus-summary-move-article nil "nnimap+imap.gmail.com:[Gmail]/Trash"))
+
 ;; bbdb
 
 (use-package bbdb
