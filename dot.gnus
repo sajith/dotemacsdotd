@@ -7,13 +7,11 @@
       mml2015-encrypt-to-self t)
 
 (setq gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]"
-      ;; gnus-agent nil
-      ;; gnus-select-method '(nnnil "")
-      gnus-select-method '(nntp "news.gmane.org")
+      gnus-agent nil
+      gnus-select-method '(nnnil "")
+      ;; gnus-select-method '(nntp "news.gmane.org")
       ;; gnus-select-method '(nntp "news.gwene.org")
       gnus-secondary-select-methods '((nnimap "imap.gmail.com")))
-
-(setq mm-decrypt-option 'known)
 
 (setq message-send-mail-function 'smtpmail-send-it
       smtpmail-stream-type 'ssl
@@ -43,33 +41,4 @@ This moves them into the All Mail folder."
 This moves them into the Spam folder."
   (interactive)
   (gnus-summary-move-article nil "nnimap+imap.gmail.com:[Gmail]/Spam"))
-
-(defun gmail-trash ()
-  "Move the current or marked mails to Trash folder."
-  (interactive)
-  (gnus-summary-move-article nil "nnimap+imap.gmail.com:[Gmail]/Trash"))
-
-;; bbdb
-
-(use-package bbdb
-  ;; :if (display-graphic-p)
-  :config
-  (bbdb-initialize 'gnus 'mail 'message 'anniv)
-  (bbdb-mua-auto-update-init 'gnus 'mail 'message)
-
-  (setq bbdb-complete-mail-allow-cycling t
-        bbdb-complete-name-allow-cycling t
-        bbdb-allow-duplicates t
-        bbdb-message-all-addresses t
-
-        ;; or 'create to create without asking
-        bbdb-mua-auto-update-p 'query
-
-        ;; be disposable with SPC
-        bbdb-electric-p t
-
-        ;; very small
-        bbdb-popup-target-lines  5)
-
-  (add-hook 'message-setup-hook 'bbdb-mail-aliases))
 
