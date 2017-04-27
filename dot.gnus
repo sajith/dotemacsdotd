@@ -13,6 +13,8 @@
       ;; gnus-select-method '(nntp "news.gwene.org")
       gnus-secondary-select-methods '((nnimap "imap.gmail.com")))
 
+(add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
+
 (setq mm-decrypt-option 'known)
 
 (setq message-send-mail-function 'smtpmail-send-it
