@@ -10,10 +10,11 @@
       ;; gnus-agent nil
       ;; gnus-select-method '(nnnil "")
       gnus-select-method '(nntp "news.gmane.org")
-      ;; gnus-select-method '(nntp "news.gwene.org")
-      gnus-secondary-select-methods '((nnimap "imap.gmail.com")))
+      gnus-secondary-select-methods '((nnimap "imap.gmail.com")
+                                      (nntp "news.gwene.org")))
 
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
+(add-hook 'message-setup-hook 'mml-secure-message-encrypt)
 
 (setq mm-decrypt-option 'known)
 
@@ -25,8 +26,6 @@
       smtpmail-debug-verb t)
 
 ;; via https://github.com/kensanata/ggg
-
-(add-hook 'message-setup-hook 'mml-secure-message-encrypt)
 
 (add-hook 'gnus-summary-mode-hook 'my-gnus-summary-keys)
 
