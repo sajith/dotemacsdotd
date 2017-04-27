@@ -11,6 +11,10 @@
       ;; gnus-select-method '(nnnil "")
       gnus-select-method '(nntp "news.gmane.org")
       gnus-secondary-select-methods '((nnimap "imap.gmail.com")
+                                      ;; (nnimap "work"
+                                      ;;         (nnimap-address "outlook.office365.com")
+                                      ;;         (nnimap-server-port 993)
+                                      ;;         (nnimap-stream ssl))
                                       (nntp "news.gwene.org")))
 
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
