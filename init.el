@@ -578,7 +578,22 @@
 
 ;; ---------------------------------------------------------------------
 
+(defun org-mode-reftex-setup ()
+  (load-library "reftex")
+  (and (buffer-file-name)
+       (file-exists-p (buffer-file-name))
+       (reftex-parse-all))
+  (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
+  )
+(add-hook 'org-mode-hook 'org-mode-reftex-setup)
+
+(setq org-latex-to-pdf-process (list "latexmk -pdf -bibtex %f"))
+
+;; ---------------------------------------------------------------------
+
 (setq org-ditaa-jar-path "/usr/local/Cellar/ditaa/0.10/libexec/ditaa0_10.jar")
+
+;; (add-to-list 'org-babel-load-languages '(ditaa . t))
 
 (org-babel-do-load-languages
  'org-babel-load-languages
