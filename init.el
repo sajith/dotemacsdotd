@@ -574,6 +574,18 @@
 
 ;; ---------------------------------------------------------------------
 
+(setq org-latex-listings t)
+
+;; ---------------------------------------------------------------------
+
+(setq org-ditaa-jar-path "/usr/local/Cellar/ditaa/0.10/libexec/ditaa0_10.jar")
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ditaa . t))) ; this line activates ditaa
+
+;; ---------------------------------------------------------------------
+
 (use-package org-clock
   :ensure nil
   :init (setq org-clock-idle-time 10))
