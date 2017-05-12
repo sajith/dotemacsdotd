@@ -574,7 +574,24 @@
 
 ;; ---------------------------------------------------------------------
 
-(setq org-latex-listings t)
+(require 'ox-latex)
+
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+
+;; (setq org-latex-listings t)
+(setq org-latex-listings 'minted)
+
+;; (setq org-latex-minted-options nil)
+
+;; (setq org-latex-minted-options '(
+;;                                  ("fontsize" "\\footnotesize")
+;;                                  ("frame" "lines")
+;;                                  ("linenos=true")
+;;                                  ))
+
+(setq org-latex-pdf-process (list "latexmk -pdf %f"))
+
+;; (setq org-latex-pdf-process (list "pdflatex -shell-escape %f"))
 
 ;; ---------------------------------------------------------------------
 
