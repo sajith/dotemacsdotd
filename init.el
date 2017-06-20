@@ -48,6 +48,7 @@
  global-auto-revert-mode         t
  require-final-newline           t
  font-lock-maximum-decoration    t
+ dired-dwim-target               t
 
  uniquify-buffer-name-style      'forward
 
