@@ -688,36 +688,12 @@
 
 ;; ---------------------------------------------------------------------
 
-;; org journal setup.
-
-(defvar org-journal-file "~/org/notes/journal.org"
-  "Path to OrgMode journal file.")
-(defvar org-journal-date-format "%Y-%m-%d"
-  "Date format string for journal headings.")
-
-(defun org-journal-entry ()
-  "Create a new diary entry for today or append to an existing one."
-  (interactive)
-  (switch-to-buffer (find-file org-journal-file))
-  (widen)
-  (let ((today (format-time-string org-journal-date-format)))
-    (beginning-of-buffer)
-    ;;(unless (org-goto-local-search-forward-headings today nil t)
-    (unless (org-goto-local-search-headings today nil t)
-      ((lambda ()
-         (org-insert-heading)
-         (insert today)
-         (insert "\n\n  \n"))))
-    (beginning-of-buffer)
-    (org-show-entry)
-    (org-narrow-to-subtree)
-    (end-of-buffer)
-    (backward-char 2)
-    (unless (= (current-column) 2)
-      (insert "\n\n  "))))
-
-;; my-org-journal.el
-(global-set-key (kbd "C-c j") 'org-journal-entry)
+(use-package org-journal
+  :ensure t
+  :init
+  (setq org-journal-dir "~/org/journal/"
+        org-journal-file-format "%Y-%m-%d.org"
+        org-journal-date-format "%A, %x"))
 
 ;; ---------------------------------------------------------------------
 
