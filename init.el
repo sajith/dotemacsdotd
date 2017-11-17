@@ -262,6 +262,12 @@
 
 ;; ---------------------------------------------------------------------
 
+;; via https://www.virtualbox.org/ticket/13687 -- Emacs is wonky
+;; inside Virtualbox.
+(add-hook 'isearch-update-post-hook 'redraw-display)
+
+;; ---------------------------------------------------------------------
+
 ;; Rainbow mode for CSS and Yesod Shakespeare modes.
 (use-package rainbow-mode
   :config
