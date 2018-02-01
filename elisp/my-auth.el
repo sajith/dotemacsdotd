@@ -13,7 +13,7 @@
 (use-package auth-password-store
   :ensure t
   :init
-  (password-store-init "0x0C6DA6A29D5F02BA")
+  ;; (password-store-init "0x0C6DA6A29D5F02BA")
   (auth-pass-enable))
 
 ;; ---------------------------------------------------------------------
