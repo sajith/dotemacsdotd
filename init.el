@@ -247,9 +247,9 @@
 
 ;; ---------------------------------------------------------------------
 
-(use-package dired-sort-menu
-  :config
-  (add-hook 'dired-load-hook 'dired-sort-menu))
+;; (use-package dired-sort-menu
+;;   :config
+;;   (add-hook 'dired-load-hook 'dired-sort-menu))
 
 ;; ---------------------------------------------------------------------
 
