@@ -34,6 +34,7 @@
 (prefer-coding-system            'utf-8)
 (display-battery-mode            t)
 (cua-selection-mode              t)
+(global-hl-line-mode             t)
 
 ;; (defvar my-backup-directory "~/.emacs.d/backups")
 
