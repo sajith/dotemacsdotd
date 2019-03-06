@@ -78,6 +78,20 @@
 
 ;; ---------------------------------------------------------------------
 
+;; Pretty good font choices: Monospace, Inconsolata, Source Code Pro.
+
+;; (when (eq system-type 'gnu/linux)
+;;   (set-frame-font "Monospace-14"))
+
+(when (eq system-type 'gnu/linux)
+  (set-frame-font "Source Code Pro-14"))
+
+(when (eq system-type 'darwin)
+  (set-face-attribute 'default nil :family "Courier New")
+  (set-face-attribute 'default nil :height 140))
+
+;; ---------------------------------------------------------------------
+
 ;; ;; Open links with this week's favorite browser:
 ;; (setq browse-url-browser-function 'w3m-browse-url)
 
@@ -89,12 +103,6 @@
 (if (eq system-type 'darwin)
     (setq browse-url-browser-function 'browse-url-default-browser)
   (setq browse-url-browser-function 'w3m-browse-url))
-
-;; ---------------------------------------------------------------------
-
-(when (eq system-type 'darwin)
-  (set-face-attribute 'default nil :family "Courier New")
-  (set-face-attribute 'default nil :height 140))
 
 ;; ---------------------------------------------------------------------
 
