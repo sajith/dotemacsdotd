@@ -655,7 +655,7 @@
 
 (use-package org-capture
   :ensure nil
-  :bind ("C-q" . org-capture)
+  :bind ("C-x q" . org-capture)
   :init
   (setq org-capture-templates
         '(("t"
