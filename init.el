@@ -78,6 +78,11 @@
 
 ;; ---------------------------------------------------------------------
 
+;; (setq vc-handled-backends (RCS CVS SVN SCCS SRC Bzr Git Hg Mtn))
+;; (setq vc-handled-backends '(Git))
+
+;; ---------------------------------------------------------------------
+
 ;; Pretty good font choices: Monospace, Inconsolata, Source Code Pro.
 
 ;; (when (eq system-type 'gnu/linux)
