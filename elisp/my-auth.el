@@ -13,7 +13,6 @@
 (use-package auth-password-store
   :ensure t
   :init
-  ;; (password-store-init "0x0C6DA6A29D5F02BA")
   (auth-pass-enable))
 
 ;; ---------------------------------------------------------------------
@@ -28,7 +27,7 @@
 
 ;; (defun my-username (host)
 ;;   (nth 0 (auth-source-user-and-password host)))
-  
+
 ;; (defun my-password (host)
 ;;   (nth 1 (auth-source-user-and-password host)))
 
