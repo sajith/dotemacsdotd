@@ -32,8 +32,10 @@
     haskell-process-log t
     haskell-process-use-ghci t
     haskell-process-type 'auto ;; options: auto/ghci/cabal-repl/stack-ghci
-    haskell-compile-cabal-build-command "stack build"
-    haskell-process-path-stack "/usr/bin/stack"
+
+    ;; haskell-compile-cabal-build-command "stack build"
+    ;; haskell-process-path-stack "/usr/bin/stack"
+
     ;; haskell-process-args-stack-ghci ""
     haskell-process-reload-with-fbytecode t
     haskell-process-use-presentation-mode t
