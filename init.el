@@ -300,11 +300,12 @@
 (use-package color-theme-approximate
   :init (color-theme-approximate-on))
 
-(use-package solarized-theme)
+;; (use-package solarized-theme)
 (use-package ample-zen-theme)
+(use-package monokai-theme)
 
 (if (display-graphic-p)
-    (load-theme 'solarized-dark t)
+    (load-theme 'monokai t)
   (progn
     (load-theme 'ample-zen t)
     (set-face-background 'menu "Black")))
