@@ -293,20 +293,20 @@
 
 ;; other fun themes: almost-monokai and zenburn.
 
-(use-package color-theme
-  :init (color-theme-initialize))
+;; (use-package color-theme-modern
+;;   :init (color-theme-initialize))
 
 ;; Makes Emacs theme works on terminal transparently
 (use-package color-theme-approximate
   :init (color-theme-approximate-on))
 
-(use-package color-theme-solarized)
+(use-package solarized-theme)
 (use-package ample-zen-theme)
 
 (if (display-graphic-p)
-    (color-theme-solarized)
+    (load-theme 'solarized-dark t)
   (progn
-    (load-theme 'ample-zen)
+    (load-theme 'ample-zen t)
     (set-face-background 'menu "Black")))
 
 ;; ;; another possibility:
