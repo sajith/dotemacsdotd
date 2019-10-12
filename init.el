@@ -291,9 +291,6 @@
 
 ;; ---------------------------------------------------------------------
 
-;; (use-package color-theme-modern
-;;   :init (color-theme-initialize))
-
 ;; Makes Emacs theme works on terminal transparently
 (use-package color-theme-approximate
   :init (color-theme-approximate-on))
@@ -308,12 +305,6 @@
   (progn
     (load-theme 'ample-zen t)
     (set-face-background 'menu "Black")))
-
-;; ;; another possibility:
-;; (use-package moe-theme)
-;; (progn
-;;    (require 'moe-theme)
-;;    (moe-dark))
 
 ;; ---------------------------------------------------------------------
 
