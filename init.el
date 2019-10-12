@@ -360,9 +360,9 @@
               (LaTeX-math-mode)
               (turn-on-reftex))))
 
-(use-package latex-preview-pane
-  :init
-  (latex-preview-pane-enable))
+;; (use-package latex-preview-pane
+;;   :init
+;;   (latex-preview-pane-enable))
 
 ;; ---------------------------------------------------------------------
 
