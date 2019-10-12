@@ -13,7 +13,6 @@
 (use-package auth-password-store
   :ensure t
   :init
-  ;; (password-store-init "0x0C6DA6A29D5F02BA")
   (auth-pass-enable))
 
 ;; ---------------------------------------------------------------------
@@ -28,31 +27,31 @@
 
 ;; (defun my-username (host)
 ;;   (nth 0 (auth-source-user-and-password host)))
-  
+
 ;; (defun my-password (host)
 ;;   (nth 1 (auth-source-user-and-password host)))
 
 ;; ---------------------------------------------------------------------
 
-(defun my-username (host)
-  (auth-pass-get "Username" host))
+;; (defun my-username (host)
+;;   (auth-pass-get "Username" host))
 
-(defun my-password (host)
-  (password-store-get host))
+;; (defun my-password (host)
+;;   (password-store-get host))
 
-;; ---------------------------------------------------------------------
+;; ;; ;; ---------------------------------------------------------------------
 
-(setq my-freenode-username (my-username "irc.freenode.net")
-      my-freenode-pass (my-password "irc.freenode.net"))
+;; (setq my-freenode-username (my-username "irc.freenode.net")
+;;       my-freenode-pass (my-password "irc.freenode.net"))
 
-(setq my-oftc-username (my-username "irc.oftc.net")
-      my-oftc-pass  (my-password "irc.oftc.net"))
+;; (setq my-oftc-username (my-username "irc.oftc.net")
+;;       my-oftc-pass  (my-password "irc.oftc.net"))
 
-(setq my-librefm-username (my-username "libre.fm")
-      my-librefm-password (my-password "libre.fm"))
+;; (setq my-librefm-username (my-username "libre.fm")
+;;       my-librefm-password (my-password "libre.fm"))
 
-(setq my-pianobar-username (my-username "pandora.com")
-      my-pianobar-password (my-password "pandora.com"))
+;; (setq my-pianobar-username (my-username "pandora.com")
+;;       my-pianobar-password (my-password "pandora.com"))
 
 ;; (setq my-gtalk-jabber-password (my-password "talk.google.com"))
 
@@ -62,4 +61,3 @@
 ;;       my-smtp-password    (my-password "smtp.gmail.com"))
 
 ;; ---------------------------------------------------------------------
-
