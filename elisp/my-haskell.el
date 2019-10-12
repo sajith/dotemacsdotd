@@ -49,7 +49,7 @@
   (add-hook 'haskell-mode-hook
             (lambda ()
               ;; (ghc-init)
-              (flycheck-mode 1) ;; annoying
+              (flycheck-mode 0) ;; annoying
               (flymake-mode 0) ;; annoying
               (interactive-haskell-mode 1)  ;; not compatible with intero
               (haskell-auto-insert-module-template)
@@ -76,3 +76,6 @@
         ("C-."     . haskell-move-nested-right))
   ) ;; end haskell-mode
 
+;; (with-eval-after-load 'intero
+;;   (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
+;;   (flycheck-add-next-checker 'intero '(warning . haskell-stack-ghc)))
