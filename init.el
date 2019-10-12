@@ -291,8 +291,6 @@
 
 ;; ---------------------------------------------------------------------
 
-;; other fun themes: almost-monokai and zenburn.
-
 ;; (use-package color-theme-modern
 ;;   :init (color-theme-initialize))
 
@@ -300,12 +298,13 @@
 (use-package color-theme-approximate
   :init (color-theme-approximate-on))
 
-;; (use-package solarized-theme)
+;; some fun themes: almost-monokai, monokai, solarized, zenburn, moe.
+
+(use-package zenburn-theme)
 (use-package ample-zen-theme)
-(use-package monokai-theme)
 
 (if (display-graphic-p)
-    (load-theme 'monokai t)
+    (load-theme 'zenburn t)
   (progn
     (load-theme 'ample-zen t)
     (set-face-background 'menu "Black")))
