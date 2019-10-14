@@ -88,8 +88,8 @@
 ;; (when (eq system-type 'gnu/linux)
 ;;   (set-frame-font "Monospace-14"))
 
-(when (eq system-type 'gnu/linux)
-  (set-frame-font "Source Code Pro-14"))
+;; (when (eq system-type 'gnu/linux)
+;;   (set-frame-font "Source Code Pro-14"))
 
 (when (eq system-type 'darwin)
   (set-face-attribute 'default nil :family "Courier New")
