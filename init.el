@@ -111,12 +111,6 @@
 
 ;; ---------------------------------------------------------------------
 
-(when (eq system-type 'darwin)
-  (set-face-attribute 'default nil :family "Courier New")
-  (set-face-attribute 'default nil :height 140))
-
-;; ---------------------------------------------------------------------
-
 (dolist (hook '(text-mode-hook
                 post-mode-hook
                 message-mode-hook
