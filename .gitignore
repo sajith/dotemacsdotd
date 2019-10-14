@@ -22,3 +22,11 @@
 /var/
 /network-security.data
 /bbdb
+/#recentf#
+/gtkrc
+/mastodon.plstore
+/projectile-bookmarks.eld
+/projectile.cache
+/transient/
+
+custom.el

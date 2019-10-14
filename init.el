@@ -34,6 +34,7 @@
 (prefer-coding-system            'utf-8)
 (display-battery-mode            t)
 (cua-selection-mode              t)
+(global-hl-line-mode             t)
 
 ;; (defvar my-backup-directory "~/.emacs.d/backups")
 
@@ -74,6 +75,25 @@
 (put 'narrow-to-defun  'disabled nil) ;; C-x n d
 (put 'narrow-to-page   'disabled nil) ;; C-x n p
 (put 'narrow-to-region 'disabled nil) ;; C-x n r
+
+;; ---------------------------------------------------------------------
+
+;; (setq vc-handled-backends (RCS CVS SVN SCCS SRC Bzr Git Hg Mtn))
+;; (setq vc-handled-backends '(Git))
+
+;; ---------------------------------------------------------------------
+
+;; Pretty good font choices: Monospace, Inconsolata, Source Code Pro.
+
+;; (when (eq system-type 'gnu/linux)
+;;   (set-frame-font "Monospace-14"))
+
+(when (eq system-type 'gnu/linux)
+  (set-frame-font "Source Code Pro-14"))
+
+(when (eq system-type 'darwin)
+  (set-face-attribute 'default nil :family "Courier New")
+  (set-face-attribute 'default nil :height 140))
 
 ;; ---------------------------------------------------------------------
 
@@ -247,9 +267,9 @@
 
 ;; ---------------------------------------------------------------------
 
-(use-package dired-sort-menu
-  :config
-  (add-hook 'dired-load-hook 'dired-sort-menu))
+;; (use-package dired-sort-menu
+;;   :config
+;;   (add-hook 'dired-load-hook 'dired-sort-menu))
 
 ;; ---------------------------------------------------------------------
 
@@ -291,9 +311,14 @@
 
 ;; ---------------------------------------------------------------------
 
+;; other fun themes: almost-monokai and zenburn.
+
+(use-package color-theme
+  :init (color-theme-initialize))
+
 ;; Makes Emacs theme works on terminal transparently
-(use-package color-theme-approximate
-  :init (color-theme-approximate-on))
+;; (use-package color-theme-approximate
+;;   :init (color-theme-approximate-on))
 
 ;; some fun themes: almost-monokai, monokai, solarized, zenburn, moe.
 
@@ -632,7 +657,7 @@
 
 (use-package org-capture
   :ensure nil
-  :bind ("C-q" . org-capture)
+  :bind ("C-x q" . org-capture)
   :init
   (setq org-capture-templates
         '(("t"

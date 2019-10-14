@@ -7,15 +7,15 @@
       mml2015-encrypt-to-self t)
 
 (setq gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]"
-      ;; gnus-agent nil
-      ;; gnus-select-method '(nnnil "")
-      gnus-select-method '(nntp "news.gmane.org")
-      gnus-secondary-select-methods '((nnimap "imap.gmail.com")
-                                      ;; (nnimap "work"
-                                      ;;         (nnimap-address "outlook.office365.com")
-                                      ;;         (nnimap-server-port 993)
-                                      ;;         (nnimap-stream ssl))
-                                      (nntp "news.gwene.org")))
+      gnus-select-method '(nnimap "imap.gmail.com"))
+
+      ;; gnus-select-method '(nntp "news.gmane.org")
+      ;; gnus-secondary-select-methods '((nnimap "imap.gmail.com")
+      ;;                                 ;; (nnimap "work"
+      ;;                                 ;;         (nnimap-address "outlook.office365.com")
+      ;;                                 ;;         (nnimap-server-port 993)
+      ;;                                 ;;         (nnimap-stream ssl))
+      ;;                                 (nntp "news.gwene.org")))
 
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 (add-hook 'message-setup-hook 'mml-secure-message-encrypt)
