@@ -311,15 +311,6 @@
 
 ;; ---------------------------------------------------------------------
 
-;; other fun themes: almost-monokai and zenburn.
-
-(use-package color-theme
-  :init (color-theme-initialize))
-
-;; Makes Emacs theme works on terminal transparently
-;; (use-package color-theme-approximate
-;;   :init (color-theme-approximate-on))
-
 ;; some fun themes: almost-monokai, monokai, solarized, zenburn, moe.
 
 (use-package zenburn-theme)
