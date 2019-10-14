@@ -29,4 +29,6 @@
 /projectile.cache
 /transient/
 
-custom.el
+/custom.el
+/diary
+/org-journal.cache
