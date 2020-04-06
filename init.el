@@ -91,6 +91,14 @@
 ;; (when (eq system-type 'gnu/linux)
 ;;   (set-frame-font "Source Code Pro-14"))
 
+;; (when (eq system-type 'gnu/linux)
+;;   (set-face-attribute 'default nil :family "Source Code Pro")
+;;   (set-face-attribute 'default nil :height 125))
+
+(when (eq system-type 'gnu/linux)
+  (set-face-attribute 'default nil :family "Inconsolata")
+  (set-face-attribute 'default nil :height 140))
+
 (when (eq system-type 'darwin)
   (set-face-attribute 'default nil :family "Courier New")
   (set-face-attribute 'default nil :height 140))
