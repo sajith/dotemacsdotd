@@ -573,6 +573,7 @@
                                "~/org/personal.org"
                                "~/org/projects.org"
                                "~/org/school.org"
+                               "~/org/tahoe.org"
                                "~/org/work.org"
                                "~/org/research.org"
                                "~/org/jobhunt.org"))
