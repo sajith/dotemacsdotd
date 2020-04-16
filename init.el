@@ -516,9 +516,9 @@
 ;; * Calendar
 ;; %%(diary-sunrise-sunset)
 
-(setq calendar-latitude      41.8089
-      calendar-longitude     -88.0112
-      calendar-location-name "Downers Grove, IL")
+(setq calendar-latitude      43.653225
+      calendar-longitude     -79.383186
+      calendar-location-name "Toronto, ON")
 
 ;; ---------------------------------------------------------------------
 
