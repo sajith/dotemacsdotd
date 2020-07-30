@@ -271,6 +271,12 @@
 
 ;; ---------------------------------------------------------------------
 
+;; Use ripgrep from Emacs
+(use-package deadgrep
+  :bind ("<f5>" . deadgrep))
+
+;; ---------------------------------------------------------------------
+
 ;; (use-package dired-sort-menu
 ;;   :config
 ;;   (add-hook 'dired-load-hook 'dired-sort-menu))
