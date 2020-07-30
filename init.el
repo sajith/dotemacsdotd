@@ -208,12 +208,12 @@
   (insert (format-time-string "%a, %d %b %Y %H:%M:%S %z")))
 
 (defun insert-date ()
-  "Insert today's date at point"
+  "Insert today's date at point."
   (interactive)
   (insert (format-time-string "%a, %d %b %Y")))
 
 (defun insert-hhmm ()
-  "Inset current hour and minute at point"
+  "Inset current hour and minute at point."
   (interactive)
   (insert (format-time-string "%I:%M%p")))
 
