@@ -155,8 +155,8 @@
 
   ;; use https sources.
   (setq package-archives
-        '(("melpa" . "https://melpa.org/packages/")
-          ("gnu"   . "https://elpa.gnu.org/packages/")
+        '(("melpa-stable" . "https://stable.melpa.org/packages/")
+          ("gnu" . "https://elpa.gnu.org/packages/")
           ;; ("marmalade" . "https://marmalade-repo.org/packages/")
           ))
 
