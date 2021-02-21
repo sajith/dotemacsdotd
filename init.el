@@ -267,6 +267,9 @@
 (use-package magit
   :bind ("<f11>" . magit-status))
 
+(use-package forge
+  :after magit)
+
 ;; ---------------------------------------------------------------------
 
 ;; Use ripgrep from Emacs
