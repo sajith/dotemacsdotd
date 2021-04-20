@@ -531,7 +531,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.ligo\\'" . tuareg-mode))
 (add-to-list 'auto-mode-alist '("\\.mligo\\'" . tuareg-mode))
-(add-to-list 'auto-mode-alist '("\\.religo\\'" . tuareg-mode))
+(add-to-list 'auto-mode-alist '("\\.religo\\'" . reason-mode))
 
 ;; ---------------------------------------------------------------------
 
