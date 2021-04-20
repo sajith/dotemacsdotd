@@ -254,6 +254,9 @@
   :init
   (global-flycheck-mode t))
 
+;; flycheck has been acting wonky in python-mode lately
+(setq flycheck-global-modes '(not python-mode))
+
 ;; ---------------------------------------------------------------------
 
 (use-package recentf
