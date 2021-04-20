@@ -2,7 +2,7 @@
 
 ;; ---------------------------------------------------------------------
 
-(use-package tls)
+;; (use-package tls)
 
 (use-package erc
   :init
