@@ -529,6 +529,12 @@
 
 ;; ---------------------------------------------------------------------
 
+(add-to-list 'auto-mode-alist '("\\.ligo\\'" . tuareg-mode))
+(add-to-list 'auto-mode-alist '("\\.mligo\\'" . tuareg-mode))
+(add-to-list 'auto-mode-alist '("\\.religo\\'" . tuareg-mode))
+
+;; ---------------------------------------------------------------------
+
 ;; Haskell
 
 ;; Need to have these programs: ghc-mod happy hasktags hindent hlint
