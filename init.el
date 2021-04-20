@@ -299,6 +299,12 @@
 
 ;; ---------------------------------------------------------------------
 
+(load "~/.emacs.d/elisp/michelson-mode.el" nil t)
+(setq michelson-client-command "~/software/tezos/tezos-client")
+(setq michelson-alphanet nil)
+
+;; ---------------------------------------------------------------------
+
 ;; Rainbow mode for CSS and Yesod Shakespeare modes.
 (use-package rainbow-mode
   :config
