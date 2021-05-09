@@ -368,12 +368,6 @@
 
 ;; ---------------------------------------------------------------------
 
-(load "~/.emacs.d/elisp/michelson-mode.el" nil t)
-(setq michelson-client-command "~/software/tezos/tezos-client")
-(setq michelson-alphanet nil)
-
-;; ---------------------------------------------------------------------
-
 ;; Rainbow mode for CSS and Yesod Shakespeare modes.
 (use-package rainbow-mode
   :config
@@ -605,9 +599,18 @@
 
 ;; ---------------------------------------------------------------------
 
+;; Tezos stuff
+
 (add-to-list 'auto-mode-alist '("\\.ligo\\'" . tuareg-mode))
 (add-to-list 'auto-mode-alist '("\\.mligo\\'" . tuareg-mode))
 (add-to-list 'auto-mode-alist '("\\.religo\\'" . reason-mode))
+
+(use-package deferred
+  :ensure t)
+
+(load "~/.emacs.d/elisp/michelson-mode.el" nil t)
+(setq michelson-client-command "~/software/tezos/tezos-client")
+(setq michelson-alphanet nil)
 
 ;; ---------------------------------------------------------------------
 
