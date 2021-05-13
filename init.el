@@ -331,6 +331,16 @@
 
 ;; ---------------------------------------------------------------------
 
+(use-package git-gutter
+  :ensure t
+  :init
+  (when (display-graphic-p)
+      (use-package git-gutter-fringe
+        :ensure t))
+  (global-git-gutter-mode))
+
+;; ---------------------------------------------------------------------
+
 ;; Use ripgrep from Emacs
 (use-package deadgrep
   :bind ("<f5>" . deadgrep))
