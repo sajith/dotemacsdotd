@@ -644,6 +644,7 @@
          ("C-c a" . org-agenda))
   :init
   (setq org-log-done t
+        org-startup-folded t
         org-startup-indented t
         org-columns-content t
         org-align-all-tags t
