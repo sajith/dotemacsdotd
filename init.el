@@ -546,8 +546,8 @@
       (setq dictionary-server "localhost")
     (setq dictionary-server "dict.org"))
   :bind
-  (("C-c d s" . dictionary-search)
-   ("C-c d m" . dictionary-match-words)))
+  (("C-c D s" . dictionary-search)
+   ("C-c D m" . dictionary-match-words)))
 
 ;; ---------------------------------------------------------------------
 
@@ -578,7 +578,7 @@
 
 ;; Diary stuff is mostly ignored -- org-journal is nicer.
 (use-package calendar
-  :bind ("C-c d d" . calendar)
+  :bind ("C-c D c" . calendar)
   :init
   (setq diary-file  "~/.emacs.d/diary"
         diary-show-holidays-flag              t
