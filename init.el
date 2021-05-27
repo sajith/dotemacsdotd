@@ -323,6 +323,13 @@
 
 ;; ---------------------------------------------------------------------
 
+;; Use ssh-agent (and gpg-agent) state, when they are available,
+;; instead of having to type ssh key password every time when doing a
+;; magit pull/push.  Needs https://www.funtoo.org/Keychain command.
+(use-package keychain-environment
+  :init
+  (keychain-refresh-environment))
+
 (use-package magit
   :bind ("<f11>" . magit-status))
 
