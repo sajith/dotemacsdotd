@@ -612,7 +612,7 @@
   (use-package ligo-mode))
 
 (when (< emacs-major-version 27)
-  ((use-package tuareg-mode)
+  ((use-package tuareg)
    (use-package reason-mode)
    (add-to-list 'auto-mode-alist '("\\.ligo\\'" . tuareg-mode))
    (add-to-list 'auto-mode-alist '("\\.mligo\\'" . tuareg-mode))
