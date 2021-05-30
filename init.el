@@ -612,11 +612,12 @@
   (use-package ligo-mode))
 
 (when (< emacs-major-version 27)
-  ((use-package tuareg)
-   (use-package reason-mode)
-   (add-to-list 'auto-mode-alist '("\\.ligo\\'" . tuareg-mode))
-   (add-to-list 'auto-mode-alist '("\\.mligo\\'" . tuareg-mode))
-   (add-to-list 'auto-mode-alist '("\\.religo\\'" . reason-mode))))
+  (use-package tuareg)
+  (lambda()
+    (use-package reason-mode)
+    (add-to-list 'auto-mode-alist '("\\.ligo\\'" . tuareg-mode))
+    (add-to-list 'auto-mode-alist '("\\.mligo\\'" . tuareg-mode))
+    (add-to-list 'auto-mode-alist '("\\.religo\\'" . reason-mode))))
 
 ;; michelson-mode requires deferred.
 (use-package deferred
