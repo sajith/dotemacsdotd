@@ -33,11 +33,11 @@
 
 ;; ---------------------------------------------------------------------
 
-(defun my-username (host)
-  (auth-pass-get "Username" host))
+(defun my-username (entry)
+  (auth-pass-get "Username" entry))
 
-(defun my-password (host)
-  (password-store-get host))
+(defun my-password (entry)
+  (password-store-get entry))
 
 ;; ;; ;; ---------------------------------------------------------------------
 
