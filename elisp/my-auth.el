@@ -47,6 +47,15 @@
 (setq my-oftc-username (my-username "irc.oftc.net")
       my-oftc-pass  (my-password "irc.oftc.net"))
 
+(setq my-znc-libera-username "sajith"
+      my-znc-libera-pass (concat "sajith/libera:" (my-password "irc.nonzen.in/sajith")))
+
+(setq my-znc-oftc-username "sajith"
+      my-znc-oftc-pass (concat "sajith/oftc:" (my-password "irc.nonzen.in/sajith")))
+
+(setq my-znc-freenode-username "sajith"
+      my-znc-freenode-pass (concat "sajith/freenode:" (my-password "irc.nonzen.in/sajith")))
+
 ;; (setq my-librefm-username (my-username "libre.fm")
 ;;       my-librefm-password (my-password "libre.fm"))
 
