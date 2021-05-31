@@ -54,11 +54,40 @@
 ;; (easy-menu-add-item nil '("tools") ["IRC" erc-select t])
 
 ;; ---------------------------------------------------------------------
+;; To connect to IRC via ZNC instance
 
-;; https://www.emacswiki.org/emacs/ErcSSL
-;; Or, just use erc-ssl?
+(defun erc-znc-libera ()
+  "Connect to the irc.libera.chat via the bouncer."
+  (interactive)
+  (erc-tls :server "irc.nonzen.in"
+           :port 6697
+           :nick my-znc-libera-username
+           :password my-znc-libera-pass
+           :full-name user-full-name))
+
+(defun erc-znc-oftc ()
+  "Connect to the irc.oftc.net via the bouncer."
+  (interactive)
+  (erc-tls :server "irc.nonzen.in"
+           :port 6697
+           :nick my-znc-oftc-username
+           :password my-znc-oftc-pass
+           :full-name user-full-name))
+
+(defun erc-znc-freenode ()
+  "Connect to the irc.oftc.net via the bouncer."
+  (interactive)
+  (erc-tls :server "irc.nonzen.in"
+           :port 6697
+           :nick my-znc-freenode-username
+           :password my-znc-freenode-pass
+           :full-name user-full-name))
+
+;; ---------------------------------------------------------------------
+;; For direct connections to IRC networks.
+
 (defun erc-oftc ()
-  "Connect to IRC over SSL."
+  "Connect to OFTC over SSL."
   (interactive)
   (erc-tls :server "irc.oftc.net"
            :port 6697
@@ -66,7 +95,7 @@
            :full-name user-full-name))
 
 (defun erc-freenode ()
-  "Connect to freenode over SSL."
+  "Connect to Freenode over SSL."
   (interactive)
   (erc-tls :server "irc.freenode.net"
            :port 6697
