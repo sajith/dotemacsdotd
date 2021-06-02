@@ -27,26 +27,27 @@
    erc-prompt-for-nickserv-password nil
    erc-nickserv-identify-mode 'autodetect)
 
-  (setq erc-nickserv-passwords
-        '((freenode   ((,my-freenode-username . ,my-freenode-pass)))
-          (OFTC       ((,my-oftc-username     . ,my-oftc-pass)))))
-
   ;; ;; In case I want to autojoin.
   ;; (setq erc-autojoin-channels-alist
   ;;       '(("freenode.net" "#emacs" "#haskell" "#hcoop")
   ;;         ("oftc.net"     "#debian")))
 
-  :config
-  (add-hook 'erc-after-connect
-            '(lambda (SERVER NICK)
-               (cond
-                ((string-match "freenode\\.net" SERVER)
-                 (erc-message "PRIVMSG"
-                              (format "NickServ identify %s" my-freenode-pass)))
-                ((string-match "oftc\\.net" SERVER)
-                 (erc-message "PRIVMSG"
-                              (format "NickServ identify %s" my-oftc-pass))))))
 
+  ;; ;; In case I am not using SASL
+  ;; (setq erc-nickserv-passwords
+  ;;       '((freenode   ((,my-freenode-username . ,my-freenode-pass)))
+  ;;         (OFTC       ((,my-oftc-username     . ,my-oftc-pass)))))
+
+  ;; :config
+  ;; (add-hook 'erc-after-connect
+  ;;           '(lambda (SERVER NICK)
+  ;;              (cond
+  ;;               ((string-match "freenode\\.net" SERVER)
+  ;;                (erc-message "PRIVMSG"
+  ;;                             (format "NickServ identify %s" my-freenode-pass)))
+  ;;               ((string-match "oftc\\.net" SERVER)
+  ;;                (erc-message "PRIVMSG"
+  ;;                             (format "NickServ identify %s" my-oftc-pass))))))
   )
 
 ;; ;; Add ERC to tools menu.
