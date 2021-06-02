@@ -2,8 +2,6 @@
 
 ;; ---------------------------------------------------------------------
 
-;; (use-package tls)
-
 (use-package erc
   :init
   (setq-default
@@ -49,10 +47,6 @@
   ;;                (erc-message "PRIVMSG"
   ;;                             (format "NickServ identify %s" my-oftc-pass))))))
   )
-
-;; ;; Add ERC to tools menu.
-;; (require 'easymenu)
-;; (easy-menu-add-item nil '("tools") ["IRC" erc-select t])
 
 ;; ---------------------------------------------------------------------
 ;; To connect to IRC via ZNC instance
