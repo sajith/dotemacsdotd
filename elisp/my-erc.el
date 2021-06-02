@@ -31,9 +31,10 @@
         '((freenode   ((,my-freenode-username . ,my-freenode-pass)))
           (OFTC       ((,my-oftc-username     . ,my-oftc-pass)))))
 
-  (setq erc-autojoin-channels-alist
-        '(("freenode.net" "#emacs" "#haskell" "#hcoop")
-          ("oftc.net"     "#debian")))
+  ;; ;; In case I want to autojoin.
+  ;; (setq erc-autojoin-channels-alist
+  ;;       '(("freenode.net" "#emacs" "#haskell" "#hcoop")
+  ;;         ("oftc.net"     "#debian")))
 
   :config
   (add-hook 'erc-after-connect
