@@ -21,31 +21,8 @@
    (quote ("JOIN" "KICK" "NICK" "PART" "QUIT" "MODE" "333" "353"))
    erc-user-full-name user-full-name
    erc-email-userid user-mail-address     ; for when ident is not activated
-   ;; erc-prompt-for-password nil         ; school irc requires a password
    erc-prompt-for-nickserv-password nil
    erc-nickserv-identify-mode 'autodetect)
-
-  ;; ;; In case I want to autojoin.
-  ;; (setq erc-autojoin-channels-alist
-  ;;       '(("freenode.net" "#emacs" "#haskell" "#hcoop")
-  ;;         ("oftc.net"     "#debian")))
-
-
-  ;; ;; In case I am not using SASL
-  ;; (setq erc-nickserv-passwords
-  ;;       '((freenode   ((,my-freenode-username . ,my-freenode-pass)))
-  ;;         (OFTC       ((,my-oftc-username     . ,my-oftc-pass)))))
-
-  ;; :config
-  ;; (add-hook 'erc-after-connect
-  ;;           '(lambda (SERVER NICK)
-  ;;              (cond
-  ;;               ((string-match "freenode\\.net" SERVER)
-  ;;                (erc-message "PRIVMSG"
-  ;;                             (format "NickServ identify %s" my-freenode-pass)))
-  ;;               ((string-match "oftc\\.net" SERVER)
-  ;;                (erc-message "PRIVMSG"
-  ;;                             (format "NickServ identify %s" my-oftc-pass))))))
   )
 
 ;; ---------------------------------------------------------------------
