@@ -36,8 +36,6 @@
 (cua-selection-mode              t)
 (global-hl-line-mode             t)
 
-;; (defvar my-backup-directory "~/.emacs.d/backups")
-
 (setq-default
  inhibit-startup-message         t
  save-place                      t
@@ -68,9 +66,6 @@
 
  enable-local-variables          :safe
  )
-
-;; emacs may not create backup directory?
-;; (make-directory my-backup-directory t)
 
 ;; ---------------------------------------------------------------------
 
