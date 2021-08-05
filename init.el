@@ -55,6 +55,9 @@
 
  vc-make-backup-files            nil
 
+ ;; Do not leave emacs mistakenly.
+ confirm-kill-emacs              'yes-or-no-p
+
  ;; https://www.emacswiki.org/emacs/BackupDirectory
  backup-by-copying               t
  backup-directory-alist          '(("." . "~/.emacs.d/backups"))
