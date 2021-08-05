@@ -69,15 +69,6 @@
            :password my-znc-oftc-pass
            :full-name user-full-name))
 
-(defun erc-znc-freenode ()
-  "Connect to the irc.oftc.net via the bouncer."
-  (interactive)
-  (erc-tls :server "irc.nonzen.in"
-           :port 6697
-           :nick my-znc-freenode-username
-           :password my-znc-freenode-pass
-           :full-name user-full-name))
-
 ;; ---------------------------------------------------------------------
 ;; For direct connections to IRC networks.
 
