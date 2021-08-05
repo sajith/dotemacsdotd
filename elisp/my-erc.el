@@ -80,14 +80,6 @@
            :nick my-oftc-username
            :full-name user-full-name))
 
-(defun erc-freenode ()
-  "Connect to Freenode over SSL."
-  (interactive)
-  (erc-tls :server "irc.freenode.net"
-           :port 6697
-           :nick my-freenode-username
-           :full-name user-full-name))
-
 ;; ---------------------------------------------------------------------
 
 ;; TODO: rewrite using (require)
