@@ -72,8 +72,6 @@
 ;; emacs may not create backup directory?
 ;; (make-directory my-backup-directory t)
 
-(defalias 'yes-or-no-p 'y-or-n-p)
-
 ;; ---------------------------------------------------------------------
 
 ;; C-x n n for narrowing / C-x n w for widening
