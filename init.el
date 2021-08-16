@@ -717,6 +717,12 @@
 
 ;; ---------------------------------------------------------------------
 
+(use-package org-bullets
+  :config
+  (add-hook 'org-mode-hook 'org-bullets-mode))
+
+;; ---------------------------------------------------------------------
+
 (defun org-mode-reftex-setup ()
   (load-library "reftex")
   (and (buffer-file-name)
