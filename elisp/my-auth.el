@@ -35,9 +35,6 @@
 
 ;; ;; ;; ---------------------------------------------------------------------
 
-(setq my-freenode-username (my-username "irc.freenode.net")
-      my-freenode-pass (my-password "irc.freenode.net"))
-
 (setq my-oftc-username (my-username "irc.oftc.net")
       my-oftc-pass  (my-password "irc.oftc.net"))
 
@@ -46,9 +43,6 @@
 
 (setq my-znc-oftc-username "sajith"
       my-znc-oftc-pass (concat "sajith/oftc:" (my-password "irc.nonzen.in/sajith")))
-
-(setq my-znc-freenode-username "sajith"
-      my-znc-freenode-pass (concat "sajith/freenode:" (my-password "irc.nonzen.in/sajith")))
 
 ;; (setq my-librefm-username (my-username "libre.fm")
 ;;       my-librefm-password (my-password "libre.fm"))
