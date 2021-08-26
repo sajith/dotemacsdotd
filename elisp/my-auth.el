@@ -6,15 +6,6 @@
 
 (require 'auth-source)
 
-;; ---------------------------------------------------------------------
-
-;; https://github.com/DamienCassou/auth-password-store
-;; an auth-source backend for password-store.
-;; (use-package auth-password-store
-;;   :ensure t
-;;   :init
-;;   (auth-pass-enable))
-
 ;; auth-source-pass seems to be built-in in emacs 27.
 (use-package auth-source-pass)
 
