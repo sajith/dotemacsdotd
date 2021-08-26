@@ -10,10 +10,13 @@
 
 ;; https://github.com/DamienCassou/auth-password-store
 ;; an auth-source backend for password-store.
-(use-package auth-password-store
-  :ensure t
-  :init
-  (auth-pass-enable))
+;; (use-package auth-password-store
+;;   :ensure t
+;;   :init
+;;   (auth-pass-enable))
+
+;; auth-source-pass seems to be built-in in emacs 27.
+(use-package auth-source-pass)
 
 ;; ---------------------------------------------------------------------
 
@@ -34,10 +37,10 @@
 ;; ---------------------------------------------------------------------
 
 (defun my-username (entry)
-  (auth-pass-get "Username" entry))
+  (auth-source-pass-get "Username" entry))
 
 (defun my-password (entry)
-  (password-store-get entry))
+  (auth-source-pass-get 'secret entry))
 
 ;; ;; ;; ---------------------------------------------------------------------
 
