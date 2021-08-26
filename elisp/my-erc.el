@@ -59,32 +59,3 @@
 
 ;; ---------------------------------------------------------------------
 
-;; TODO: rewrite using (require)
-
-(use-package erc-fill
-  :ensure nil
-  :init
-  (erc-fill-mode t))
-
-(use-package erc-ring
-  :ensure nil
-  :init
-  (erc-ring-mode t))
-
-(use-package erc-netsplit
-  :ensure nil
-  :init
-  (erc-netsplit-mode t))
-
-(use-package erc-services
-  :ensure nil
-  :init
-  (erc-services-mode 1))
-
-(use-package erc-join
-  :ensure nil
-  :config
-  (erc-autojoin-mode 1))
-
-;; ---------------------------------------------------------------------
-
