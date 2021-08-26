@@ -5,13 +5,13 @@
 ;; (use-package ghc)
 ;; (use-package shm)
 
-(use-package company-ghc
-  :init
-  (with-eval-after-load 'company
-    (add-to-list 'company-backends 'company-ghc))
-  (custom-set-variables '(company-ghc-show-info t))
-  :config
-  (add-hook 'haskell-mode-hook 'company-mode))
+;; (use-package company-ghc
+;;   :init
+;;   (with-eval-after-load 'company
+;;     (add-to-list 'company-backends 'company-ghc))
+;;   (custom-set-variables '(company-ghc-show-info t))
+;;   :config
+;;   (add-hook 'haskell-mode-hook 'company-mode))
 
 (use-package haskell-mode
   :init
