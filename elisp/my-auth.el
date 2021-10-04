@@ -9,6 +9,9 @@
 ;; auth-source-pass seems to be built-in in emacs 27.
 (use-package auth-source-pass)
 
+;; I need password-store-edit etc.
+(use-package password-store)
+
 ;; ---------------------------------------------------------------------
 
 ;; https://github.com/NicolasPetton/pass
