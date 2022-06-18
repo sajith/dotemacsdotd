@@ -407,6 +407,11 @@
     (load-theme 'ample-zen t)
     (set-face-background 'menu "Black")))
 
+;; Make mode line look fancy.
+(use-package powerline
+  :init
+  (powerline-default-theme))
+
 ;; ---------------------------------------------------------------------
 
 ;; This is for situations where color-theme may not be available.
@@ -597,9 +602,9 @@
 ;; * Calendar
 ;; %%(diary-sunrise-sunset)
 
-(setq calendar-latitude      43.653225
-      calendar-longitude     -79.383186
-      calendar-location-name "Toronto, ON")
+(setq calendar-latitude      29.760427
+      calendar-longitude     -95.369804
+      calendar-location-name "Houston, TX")
 
 ;; ---------------------------------------------------------------------
 
