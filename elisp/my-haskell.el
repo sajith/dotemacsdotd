@@ -16,9 +16,9 @@
 (use-package haskell-mode
   :init
   (setq
-    haskell-notify-p t
-    haskell-stylish-on-save t ;; needs stylish-haskell
-    haskell-tags-on-save t    ;; needs hasktags
+    ;; haskell-notify-p t
+    ;; haskell-stylish-on-save t ;; needs stylish-haskell
+    ;; haskell-tags-on-save t    ;; needs hasktags
 
     tab-width 4
     haskell-indent-spaces 4
