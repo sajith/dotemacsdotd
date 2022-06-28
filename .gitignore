@@ -40,3 +40,5 @@
 /lib/
 /slack.el
 /request/
+
+/.lsp-session-v1
