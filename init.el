@@ -314,6 +314,15 @@
 
 ;; ---------------------------------------------------------------------
 
+(use-package lsp-mode
+  :config
+  (add-hook 'c++-mode-hook #'lsp)
+  (add-hook 'python-mode-hook #'lsp)
+  (add-hook 'rust-mode-hook #'lsp)
+  )
+
+;; ---------------------------------------------------------------------
+
 (use-package recentf
   :bind ("C-c f" . recentf-open-files)
   :init
