@@ -231,6 +231,14 @@
 
 ;; ---------------------------------------------------------------------
 
+;; trying out https://github.com/mickeynp/discover.el
+(use-package discover
+  :config
+  (global-discover-mode 1)
+  )
+
+;; ---------------------------------------------------------------------
+
 ;; ;; Some more shaved Yak hair, for eventual use
 
 ;; (defun my-load (filename)
