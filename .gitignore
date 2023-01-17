@@ -43,3 +43,7 @@
 
 /.lsp-session-v1
 /eln-cache/
+/emojis/
+/flycheck_init.el
+/forge-database-v7-20220711-0927.sql
+/persist/
