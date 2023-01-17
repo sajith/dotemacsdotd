@@ -13,4 +13,6 @@
 ;; (load "~/.emacs.d/elisp/my-jabber.el")
 ;; (load "~/.emacs.d/elisp/my-smtp.el")
 
+(load "~/.emacs.d/elisp/my-mastodon.el")
+
 ;; ---------------------------------------------------------------------
