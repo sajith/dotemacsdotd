@@ -623,28 +623,6 @@
 
 ;; ---------------------------------------------------------------------
 
-;; Tezos stuff
-
-(when (> emacs-major-version 27)
-  (use-package ligo-mode))
-
-(when (< emacs-major-version 27)
-  (use-package tuareg)
-  (use-package reason-mode)
-  (add-to-list 'auto-mode-alist '("\\.ligo\\'" . tuareg-mode))
-  (add-to-list 'auto-mode-alist '("\\.mligo\\'" . tuareg-mode))
-  (add-to-list 'auto-mode-alist '("\\.religo\\'" . reason-mode)))
-
-;; michelson-mode requires deferred.
-(use-package deferred
-  :ensure t)
-
-(load "~/.emacs.d/elisp/michelson-mode.el" nil t)
-(setq michelson-client-command "~/software/tezos/tezos-client")
-(setq michelson-alphanet nil)
-
-;; ---------------------------------------------------------------------
-
 ;; Haskell
 
 ;; Need to have these programs: ghc-mod happy hasktags hindent hlint
