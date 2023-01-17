@@ -342,12 +342,20 @@
 
 ;; ---------------------------------------------------------------------
 
-(use-package lsp-mode
+;; language server
+
+;; (use-package lsp-mode
+;;   :config
+;;   (add-hook 'c++-mode-hook #'lsp)
+;;   (add-hook 'python-mode-hook #'lsp)
+;;   (add-hook 'rust-mode-hook #'lsp)
+;;   )
+
+(use-package eglot
   :config
-  (add-hook 'c++-mode-hook #'lsp)
-  (add-hook 'python-mode-hook #'lsp)
-  (add-hook 'rust-mode-hook #'lsp)
-  )
+  (add-hook 'c++-mode-hook 'eglot-ensure)
+  (add-hook 'python-mode-hook 'eglot-ensure)
+  (add-hook 'rust-mode-hook 'eglot-ensure))
 
 ;; ---------------------------------------------------------------------
 
