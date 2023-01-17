@@ -287,7 +287,7 @@
 (use-package window-number
   :init
   (require 'window-number)
-  :config0
+  :config
   (window-number-mode 1)
   (window-number-meta-mode 1))
 
