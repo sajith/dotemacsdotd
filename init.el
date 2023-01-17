@@ -291,6 +291,25 @@
   (window-number-mode 1)
   (window-number-meta-mode 1))
 
+;; ;; Switch winodws with M-[0-9] (default: C-x w [0-9])
+;; ;; winum is a possible alternative to window-number.
+;; ;; https://github.com/deb0ch/emacs-winum
+;; (use-package winum
+;;   :ensure t
+;;   :init
+;;   (winum-mode t)
+;;   (setq winum-format " [ %s ]")
+;;   :bind (("M-0" . winum-select-window-0-or-10)
+;;          ("M-1" . winum-select-window-1)
+;;          ("M-2" . winum-select-window-2)
+;;          ("M-3" . winum-select-window-3)
+;;          ("M-4" . winum-select-window-4)
+;;          ("M-5" . winum-select-window-5)
+;;          ("M-6" . winum-select-window-6)
+;;          ("M-7" . winum-select-window-7)
+;;          ("M-8" . winum-select-window-8)
+;;          ("M-9" . winum-select-window-9)))
+
 ;; ---------------------------------------------------------------------
 
 ;; bring up help for key bindings
