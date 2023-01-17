@@ -287,7 +287,7 @@
 (use-package window-number
   :init
   (require 'window-number)
-  :config
+  :config0
   (window-number-mode 1)
   (window-number-meta-mode 1))
 
@@ -297,8 +297,9 @@
 ;; (use-package winum
 ;;   :ensure t
 ;;   :init
-;;   (winum-mode t)
 ;;   (setq winum-format " [ %s ]")
+;;   :config
+;;   (winum-mode t)
 ;;   :bind (("M-0" . winum-select-window-0-or-10)
 ;;          ("M-1" . winum-select-window-1)
 ;;          ("M-2" . winum-select-window-2)
