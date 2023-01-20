@@ -337,8 +337,15 @@
   :init
   (global-flycheck-mode t))
 
+;; ---------------------------------------------------------------------
+
 ;; flycheck has been acting wonky in python-mode lately
 (setq flycheck-global-modes '(not python-mode))
+
+;; Make nicer docstrings.
+(add-hook 'python-mode-hook 'python-docstring-mode)
+
+;; (setq flymake-python-pyflakes-executable "flake8")
 
 ;; ---------------------------------------------------------------------
 
