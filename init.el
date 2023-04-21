@@ -372,6 +372,10 @@
   :init
   (setq epg-pinentry-mode 'loopback))
 
+(use-package pinentry
+  :init
+  (pinentry-start))
+
 (use-package magit
   :bind ("<f11>" . magit-status))
 
