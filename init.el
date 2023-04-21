@@ -368,6 +368,10 @@
   :init
   (keychain-refresh-environment))
 
+(use-package epg
+  :init
+  (setq epg-pinentry-mode 'loopback))
+
 (use-package magit
   :bind ("<f11>" . magit-status))
 
