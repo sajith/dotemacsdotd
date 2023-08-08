@@ -20,7 +20,8 @@
 
 ;; ---------------------------------------------------------------------
 
-;; (setq auth-sources '("~/.authinfo.gpg"))
+;; needed for forge: https://github.com/magit/forge
+(setq auth-sources '("~/.authinfo.gpg"))
 
 ;; (defun my-username (host)
 ;;   (nth 0 (auth-source-user-and-password host)))
