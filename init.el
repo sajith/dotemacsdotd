@@ -136,7 +136,7 @@
 ;; With older versions of emacs, 'package' and 'use-package' will not
 ;; work.  Stop with an error in those cases.
 (when (< emacs-major-version 24)
-  (error "Need emacs 24 or later; got %s" emacs-version))
+  (error "Need Emacs 24 or later; got %s" emacs-version))
 
 ;; ---------------------------------------------------------------------
 
