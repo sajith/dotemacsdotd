@@ -437,13 +437,16 @@
 
 ;; ---------------------------------------------------------------------
 
-;; some fun themes: almost-monokai, monokai, solarized, zenburn, moe.
+;; some fun themes: almost-monokai, monokai, solarized, zenburn, moe,
+;; nano-dark.
 
-(use-package zenburn-theme)
-(use-package ample-zen-theme)
+(use-package nano-theme)
+;; (use-package zenburn-theme)
+;; (use-package ample-zen-theme)
 
 (if (display-graphic-p)
-    (load-theme 'zenburn t)
+    (load-theme 'nano-dark t)
+    ;; (load-theme 'zenburn t)  
   (progn
     (load-theme 'ample-zen t)
     (set-face-background 'menu "Black")))
