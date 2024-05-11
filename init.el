@@ -9,7 +9,7 @@
 
 ;; ---------------------------------------------------------------------
 
-;; (setq debug-on-error t)
+(setq debug-on-error t)
 
 (setq
  user-full-name    "Sajith Sasidharan"
