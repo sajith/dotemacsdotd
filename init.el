@@ -926,6 +926,10 @@
 
 ;; ---------------------------------------------------------------------
 
+;; This seems to work reliably when using Emacs flatpak.
+(setq epg-pinentry-mode 'loopback)
+(setq auth-source-debug t)
+
 (load "~/.emacs.d/elisp/my-network.el")
 
 ;; ---------------------------------------------------------------------
