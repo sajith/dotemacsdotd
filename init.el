@@ -930,6 +930,8 @@
 (setq epg-pinentry-mode 'loopback)
 (setq auth-source-debug t)
 
+(pinentry-start)
+
 (load "~/.emacs.d/elisp/my-network.el")
 
 ;; ---------------------------------------------------------------------
