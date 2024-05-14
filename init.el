@@ -926,17 +926,17 @@
 
 ;; ---------------------------------------------------------------------
 
-;; This seems to work reliably when using Emacs flatpak.
+;; ;; This seems to work reliably when using Emacs flatpak.
 
-(use-package epg
-  :config
-  (setq epg-pinentry-mode 'loopback))
+;; (use-package epg
+;;   :config
+;;   (setq epg-pinentry-mode 'loopback))
 
-;; (setq auth-source-debug t)  
+;; ;; (setq auth-source-debug t)  
 
-(use-package pinentry
-  :init
-  (pinentry-start))
+;; (use-package pinentry
+;;   :init
+;;   (pinentry-start))
 
 (load "~/.emacs.d/elisp/my-network.el")
 
