@@ -17,11 +17,10 @@
 
 ;; ---------------------------------------------------------------------
 
-(when window-system
-  (scroll-bar-mode 0)
-  (tool-bar-mode 0)
-  (menu-bar-mode 0)
-  (blink-cursor-mode 0))
+(scroll-bar-mode 0)
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+(blink-cursor-mode 0)
 
 (global-font-lock-mode           t)
 (display-time-mode               t)
@@ -912,7 +911,9 @@
 ;; ---------------------------------------------------------------------
 
 (use-package server
-  :init (server-start))
+  :config
+  (unless (server-running-p)
+    (server-start)))
 
 ;; ---------------------------------------------------------------------
 
