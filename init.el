@@ -127,9 +127,6 @@
                    (auto-fill-mode 1)
                    (flyspell-mode 1))))
 
-(dolist (hook '(emacs-lisp-mode-hook))
-  (add-hook hook 'flyspell-mode-off))
-
 ;; ---------------------------------------------------------------------
 
 ;; With older versions of emacs, 'package' and 'use-package' will not
