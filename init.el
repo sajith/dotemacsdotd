@@ -136,30 +136,36 @@
 
 ;; ---------------------------------------------------------------------
 
-(setq-default use-package-always-defer t
-              use-package-always-ensure t)
+(setq-default use-package-always-defer t)
 
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (setq-default
-   ;; Possible tls-checktrust values are: (0: Always) (1: Never) (2: Ask)
-   tls-checktrust 0
-   load-prefer-newer t
-   package-enable-at-startup nil)
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        user-emacs-directory))
+      (bootstrap-version 6))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-min))
+      (re-search-forward "^$" nil 'move)
+      (eval-region (point) (point-max))))
+  (load bootstrap-file nil 'nomessage))
 
-  ;; use https sources.
-  (setq package-archives
-        '(("melpa-stable" . "https://stable.melpa.org/packages/")
-          ("melpa" . "https://melpa.org/packages/")
-          ("gnu" . "https://elpa.gnu.org/packages/")))
+;; Override mapping for ws-butler to correct a double-protocol typo in
+;; the upstream MELPA recipe URL.
+;; (https://https.git.savannah.gnu.org...) should be
+;; (https://git.savannah.gnu.org...).
+(setq straight-recipe-overrides
+      '((nil (ws-butler
+              :type git
+              :repo "https://git.savannah.gnu.org/git/elpa/nongnu.git"
+              :branch "elpa/ws-butler"))))
 
-  (package-initialize)
-
-  ;; install use-package
-  (unless (package-installed-p 'use-package)
-    (package-refresh-contents)
-    (package-install 'use-package))
-  )
+(setq straight-use-package-by-default t)
+(straight-use-package 'use-package)
 
 ;; ---------------------------------------------------------------------
 
@@ -280,7 +286,7 @@
 ;; ---------------------------------------------------------------------
 
 (use-package window
-  :ensure nil
+  :straight nil
   :bind (("<f5>" . shrink-window-horizontally)
          ("<f6>" . enlarge-window-horizontally)
          ("<f7>" . shrink-window)
@@ -474,7 +480,7 @@
 ;; ---------------------------------------------------------------------
 
 (use-package tex-site
-  :ensure auctex
+  :straight auctex
   :disabled t
   :init
   (setq-default
@@ -497,7 +503,7 @@
 ;; ---------------------------------------------------------------------
 
 (use-package c-mode
-  :ensure nil
+  :straight nil
   :bind
   (:map c-mode-map
         ;; ("<tab>" . indent-or-complete)
@@ -517,7 +523,7 @@
   (c-set-style          "linux"))
 
 (use-package c++-mode
-  :ensure nil
+  :straight nil
   :bind (:map c++-mode-map
               ("C-m" . c-context-line-break)))
 
@@ -782,7 +788,7 @@
 ;; ---------------------------------------------------------------------
 
 (use-package org-clock
-  :ensure nil
+  :straight nil
   :init (setq org-clock-idle-time 10))
 
 ;; ---------------------------------------------------------------------
@@ -796,7 +802,7 @@
 ;; ---------------------------------------------------------------------
 
 (use-package org-capture
-  :ensure nil
+  :straight nil
   :bind ("C-x q" . org-capture)
   :init
   (setq org-capture-templates
@@ -821,7 +827,7 @@
 ;; org+jekyll website setup.
 
 (use-package ox-publish
-  :ensure nil
+  :straight nil
   :bind (("C-x p" . org-publish-current-project)
          ("C-x f" . org-publish-current-file))
   :init
