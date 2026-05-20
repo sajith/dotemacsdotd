@@ -431,7 +431,7 @@
 
 (use-package nano-theme)
 ;; (use-package zenburn-theme)
-;; (use-package ample-zen-theme)
+(use-package ample-zen-theme)
 
 (if (display-graphic-p)
     (load-theme 'nano-dark t)
