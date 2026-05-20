@@ -49,3 +49,5 @@
 /persist/
 /emms/
 /*.sqlite
+
+/straight/
