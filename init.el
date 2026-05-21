@@ -91,6 +91,12 @@
         (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
         (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
 
+
+;; ---------------------------------------------------------------------
+
+(use-package yaml-ts-mode
+  :mode "\\.ya?ml\\'")
+
 ;; ---------------------------------------------------------------------
 
 ;; C-x n n for narrowing / C-x n w for widening
