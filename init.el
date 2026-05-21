@@ -626,18 +626,6 @@
 
 ;; ---------------------------------------------------------------------
 
-;; (use-package twittering-mode
-;;   :config
-;;   (setq
-;;    twittering-use-master-password t
-;;    twittering-tinyurl-service 'goo.gl)
-;;   (add-hook 'twittering-edit-mode-hook
-;;             (lambda()
-;;               (flyspell-mode 1)
-;;               (auto-fill-mode -1))))
-
-;; ---------------------------------------------------------------------
-
 (use-package w3m
   :config (setq w3m-use-cookies t)
   :bind ("C-c g" . w3m-search))
