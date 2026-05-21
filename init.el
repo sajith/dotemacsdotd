@@ -436,12 +436,10 @@
 ;; nano-dark.
 
 (use-package nano-theme)
-;; (use-package zenburn-theme)
 (use-package ample-zen-theme)
 
 (if (display-graphic-p)
     (load-theme 'nano-dark t)
-    ;; (load-theme 'zenburn t)  
   (progn
     (load-theme 'ample-zen t)
     (set-face-background 'menu "Black")))
