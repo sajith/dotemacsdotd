@@ -871,14 +871,6 @@
 
 ;; ---------------------------------------------------------------------
 
-;; ;; This seems to work reliably when using Emacs flatpak.
-
-;; (use-package epg
-;;   :config
-;;   (setq epg-pinentry-mode 'loopback))
-
-;; ;; (setq auth-source-debug t)  
-
 ;; (use-package pinentry
 ;;   :init
 ;;   (pinentry-start))
