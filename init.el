@@ -846,21 +846,6 @@
 
 ;; ---------------------------------------------------------------------
 
-;; for js-comit run-js command.
-;; TODO: the bindings don't run correctly; check.
-(use-package js2-mode
-  :config
-  (setq inferior-js-program-command "/usr/bin/rhino")
-  :bind
-  (:map js2-mode-map
-   ("C-x C-e" . js-send-last-sexp)
-   ("C-M-x"   . js-send-last-sexp-and-go)
-   ("C-c b"   . js-send-buffer)
-   ("C-c C-b" . js-send-buffer-and-go)
-   ("C-c l"   . js-load-file-and-go)))
-
-;; ---------------------------------------------------------------------
-
 (use-package projectile
   :config
   (projectile-mode +1)
