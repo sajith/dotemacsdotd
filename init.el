@@ -773,10 +773,6 @@
 
 ;; ---------------------------------------------------------------------
 
-(setq org-ditaa-jar-path "/usr/local/Cellar/ditaa/0.10/libexec/ditaa0_10.jar")
-
-;; (add-to-list 'org-babel-load-languages '(ditaa . t))
-
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((ditaa . t))) ; this line activates ditaa
