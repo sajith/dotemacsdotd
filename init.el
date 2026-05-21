@@ -435,14 +435,12 @@
 ;; some fun themes: almost-monokai, monokai, solarized, zenburn, moe,
 ;; nano-dark.
 
-(use-package nano-theme)
-(use-package ample-zen-theme)
+ (use-package ample-zen-theme
+   :demand t
+   :config
+   (load-theme 'ample-zen t))
 
-(if (display-graphic-p)
-    (load-theme 'nano-dark t)
-  (progn
-    (load-theme 'ample-zen t)
-    (set-face-background 'menu "Black")))
+;; ---------------------------------------------------------------------
 
 ;; Make mode line look fancy.
 (use-package powerline
