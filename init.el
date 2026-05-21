@@ -808,38 +808,6 @@
 
 ;; ---------------------------------------------------------------------
 
-;; org+jekyll website setup.
-
-(use-package ox-publish
-  :straight nil
-  :bind (("C-x p" . org-publish-current-project)
-         ("C-x f" . org-publish-current-file))
-  :init
-  (setq org-publish-nonzen "~/projects/nonzen.in/jekyll/")
-  (setq org-publish-project-alist
-        '(("nonzen-notes"
-           :base-directory "~/projects/nonzen.in/org"
-           :base-extension "org"
-           :publishing-directory "~/projects/nonzen.in/jekyll/"
-           :recursive t
-           :publishing-function org-html-publish-to-html
-           :htmlized-source t
-           :headline-levels 4
-           :auto-preamble t
-           :body-only t
-           :section-numbers nil
-           :with-toc nil)
-          ("nonzen-static"
-           :base-directory "~/projects/nonzen.in/org"
-           :publishing-directory "~/projects/nonzen.in/jekyll/"
-           :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|html\\|sh\\|wma\\|ico\\|yml\\|xml\\|asc\\|txt"
-           :recursive t
-           :publishing-function org-publish-attachment)
-          ("nonzen"
-           :components ("nonzen-notes" "nonzen-static")))))
-
-;; ---------------------------------------------------------------------
-
 (use-package org-journal
   :ensure t
   :init
