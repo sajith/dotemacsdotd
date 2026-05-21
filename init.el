@@ -68,6 +68,31 @@
 
 ;; ---------------------------------------------------------------------
 
+;; Tree-sitter language grammars.  Emacs 29+ comes with built-in
+;; support for tree-sitter, but for licensing reasons, does not ship
+;; with the actual language grammars. We have to download and compile
+;; them ourselves.
+;;
+;; Run M-x treesit-install-language-grammar to install.
+(setq treesit-language-source-alist
+      '((bash "https://github.com/tree-sitter/tree-sitter-bash")
+        (cmake "https://github.com/tree-sitter/tree-sitter-cmake")
+        (css "https://github.com/tree-sitter/tree-sitter-css")
+        (elisp "https://github.com/Volgan_J.nv/tree-sitter-elisp")
+        (go "https://github.com/tree-sitter/tree-sitter-go")
+        (html "https://github.com/tree-sitter/tree-sitter-html")
+        (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
+        (json "https://github.com/tree-sitter/tree-sitter-json")
+        (make "https://github.com/tree-sitter/tree-sitter-make")
+        (markdown "https://github.com/ikatyang/tree-sitter-markdown")
+        (python "https://github.com/tree-sitter/tree-sitter-python")
+        (toml "https://github.com/tree-sitter/tree-sitter-toml")
+        (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
+        (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
+        (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
+
+;; ---------------------------------------------------------------------
+
 ;; C-x n n for narrowing / C-x n w for widening
 (put 'narrow-to-defun  'disabled nil) ;; C-x n d
 (put 'narrow-to-page   'disabled nil) ;; C-x n p
