@@ -785,14 +785,6 @@
 
 ;; ---------------------------------------------------------------------
 
-;; (use-package org-pomodoro
-;;   :config
-;;   ;; (add-hook 'org-clock-in-hook 'org-pomodoro-start)
-;;   (add-hook 'org-clock-out-hook 'org-pomodoro-finished)
-;;   (add-hook 'org-clock-cancel-hook 'org-pomodoro-kill))
-
-;; ---------------------------------------------------------------------
-
 (use-package org-capture
   :straight nil
   :bind ("C-x q" . org-capture)
