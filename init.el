@@ -450,6 +450,7 @@
 
  (use-package ample-zen-theme
    :demand t
+   :ensure t
    :config
    (load-theme 'ample-zen t))
 
