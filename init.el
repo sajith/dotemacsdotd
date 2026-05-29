@@ -94,11 +94,6 @@
 
 ;; ---------------------------------------------------------------------
 
-(use-package yaml-ts-mode
-  :mode "\\.ya?ml\\'")
-
-;; ---------------------------------------------------------------------
-
 ;; C-x n n for narrowing / C-x n w for widening
 (put 'narrow-to-defun  'disabled nil) ;; C-x n d
 (put 'narrow-to-page   'disabled nil) ;; C-x n p
@@ -197,6 +192,11 @@
 
 (setq straight-use-package-by-default t)
 (straight-use-package 'use-package)
+
+;; ---------------------------------------------------------------------
+
+(use-package yaml-ts-mode
+  :mode "\\.ya?ml\\'")
 
 ;; ---------------------------------------------------------------------
 
