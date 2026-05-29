@@ -819,6 +819,12 @@
 
 ;; ---------------------------------------------------------------------
 
+;; Define a prefix command (a new keymap) named `org-roam-prefix`
+(define-prefix-command 'org-roam-prefix)
+
+;; Bind the prefix to C-c n globally
+(global-set-key (kbd "C-c n") #'org-roam-prefix)
+
 (use-package org-roam
   :init
   (setq org-roam-v2-ack t)
