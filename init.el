@@ -875,9 +875,10 @@
 
 ;; ---------------------------------------------------------------------
 
-;; (use-package pinentry
-;;   :init
-;;   (pinentry-start))
+(use-package pinentry
+  :defer nil
+  :straight t
+  :config (pinentry-start))
 
 (load "~/.emacs.d/elisp/my-network.el")
 
