@@ -875,6 +875,10 @@
 
 ;; ---------------------------------------------------------------------
 
+;; This requires `allow-emacs-pinentry` in ~/.gnupg/gpg-agent.conf).
+;; Also probably add `allow-loopback-pinentry` (which redirects
+;; passphrase prompts back to the calling application such as Git or a
+;; script) for good measure.
 (use-package pinentry
   :defer nil
   :straight t
