@@ -882,10 +882,11 @@
 (use-package pinentry
   :defer nil
   :straight t
-  :config (pinentry-start))
-
-;; Tell EasyPG to use loopback mode for passphrase queries
-(setq epg-pinentry-mode 'loopback)
+  :config
+;; Enable loopback mode so GPG passes prompts to Emacs
+  (setq epa-pinentry-mode 'loopback)
+  ;; Start the pinentry server for the current Emacs session
+  (pinentry-start))
 
 ;; ---------------------------------------------------------------------
 
