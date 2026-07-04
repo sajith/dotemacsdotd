@@ -884,7 +884,7 @@
   :straight t
   :config
   ;; Enable loopback mode so GPG passes prompts to Emacs
-  (setq epa-pinentry-mode 'loopback)
+  (setq epg-pinentry-mode 'loopback)
   ;; Start the pinentry server for the current Emacs session
   (pinentry-start))
 
