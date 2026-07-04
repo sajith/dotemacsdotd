@@ -887,6 +887,8 @@
 ;; Tell EasyPG to use loopback mode for passphrase queries
 (setq epg-pinentry-mode 'loopback)
 
+;; ---------------------------------------------------------------------
+
 (load "~/.emacs.d/elisp/my-network.el")
 
 ;; ---------------------------------------------------------------------
